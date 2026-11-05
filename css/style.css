@@ -1,0 +1,13 @@
+body {
+    font-family: var(--font-body);
+
+}
+
+
+/*for smoother scroll when you click on a link that leads to another section*/
+/*remove if we dont like the behavior*/
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
