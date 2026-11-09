@@ -1,1 +1,48 @@
 /*colors, typography, spacing and other general CSS-variables.*/
+
+:root {
+     /* Colors - preliminary palette from DD.
+       TODO: Confirm final colors and their usage with DD. */
+    --forest-green: #263D32;
+    --sage-green: #71816A;
+    --oat-beige: #D7C9AE;
+    --ivory: #F5F3EC;
+    --terracotta: #A65F3F;
+    --charcoal:  #30332F;
+
+
+    /* Spacing - adjust to final design.*/
+    /*Pixel equivalents assume a 16px root font size. */
+    
+    --space-xs: 0.25rem;    /* 4px */
+    --space-sm: 0.5rem;     /* 8px */
+    --space-md: 1rem;       /* 16px */
+    --space-lg: 2rem;       /* 32px */
+    --space-xl: 3rem;       /* 48px */ 
+    
+         
+
+    /* Font */
+    --font-body: "DM Sans", sans-serif;
+
+
+    /* Font sizes - shared scale mobile + desktop */
+
+    --font-size-xs: 0.875rem;  /* 14px */
+    --font-size-sm: 1rem;      /* 16px */
+    --font-size-md: 1.25rem;   /* 20px */
+    --font-size-lg: 1.5rem;    /* 24px */
+    --font-size-xl: 2rem;      /* 32px */
+    --font-size-2xl: 2.25rem;  /* 36px */
+    --font-size-3xl: 2.5rem;   /* 40px */
+    --font-size-4xl: 3rem;     /* 48px */
+    --font-size-5xl: 4rem;     /* 64px */
+
+       
+
+    /* Font weight*/
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
