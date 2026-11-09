@@ -3,6 +3,9 @@
 
 
 <main>
+
+<!-- banner section -->
+
     <!-- Hero section -->
     <section class="hero">
         <h1>Skapad för <br>
@@ -24,8 +27,6 @@
     </section>
 
 
-    <!-- Hero -->
-    <!-- caourosell -->
     <!-- newsletter -->
     <!-- Insta-gallery -->
 </main>
