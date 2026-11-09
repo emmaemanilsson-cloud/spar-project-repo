@@ -23,7 +23,17 @@ jobs:
       # Hämta filerna från GitHub-repot
       - name: Checkout repository
         uses: actions/checkout@v5
-
+        
+      - name: Check SFTP secrets
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+          SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
+        run: |
+          test -n "$SFTP_HOST" && echo "Host: OK" || echo "Host: MISSING"
+          test -n "$SFTP_USERNAME" && echo "Username: OK" || echo "Username: MISSING"
+          test -n "$SFTP_PASSWORD" && echo "Password: OK" || echo "Password: MISSING"
+          
       # Ladda upp filerna till One.com
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.6
