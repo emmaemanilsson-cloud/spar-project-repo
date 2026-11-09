@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
 
