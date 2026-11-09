@@ -1,0 +1,40 @@
+
+/* temporary styling for carousel */
+
+.placeholder-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.carousel-placeholder h2 {
+
+    padding: var(--space-md);
+}
+
+.placeholder-box {
+    aspect-ratio: 1 / 1;
+    background-color: #ccc;
+    
+}
+
+.placeholder-box {
+    display: none;
+    aspect-ratio: 1 / 1;
+    background-color: #ccc;
+}
+
+.placeholder-box:first-child {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .placeholder-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .placeholder-box {
+        display: block;
+    }
+}

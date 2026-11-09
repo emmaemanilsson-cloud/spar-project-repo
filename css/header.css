@@ -1,0 +1,44 @@
+body {
+    font-family: var(--font-body);
+
+}
+
+.header-icons p {
+    margin: 0;
+}
+
+/* parent container */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    min-height: 60px;
+
+    background-color: #B4B4B4;
+}
+
+.logo-spar img {
+    width: 40px;
+    height: auto;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+
+}
+
+.menu {
+    margin-left: var(--space-lg);
+}
+
+
+/*for smoother scroll when you click on a link that leads to another section*/
+/*remove if we dont like the behavior*/
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
