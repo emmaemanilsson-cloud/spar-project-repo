@@ -30,7 +30,6 @@ jobs:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          port: ${{ secrets.SFTP_PORT }}
           sftp_only: true
           local_path: './*'
           remote_path: '/webroots/f18c9757'
