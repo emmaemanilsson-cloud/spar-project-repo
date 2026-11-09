@@ -29,6 +29,7 @@
 
     <!-- newsletter -->
     <!-- Insta-gallery -->
+    <section class="insta-section"></section>
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
