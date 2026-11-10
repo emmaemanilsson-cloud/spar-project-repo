@@ -1,0 +1,50 @@
+
+.accordion {
+    padding: var(--space-md);
+}
+
+.accordion details {
+    padding: 20px var(--space-md);
+    border-bottom: 1px solid #000;
+
+}
+
+/* accordion styling */
+.accordion summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    list-style: none;
+    width: 100%;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+/* when accordion is closed */
+.accordion summary::after {
+    content: "+";
+    
+}
+/* when accordion is open*/
+.accordion details[open] summary::after {
+    content: "-";
+}
+
+/* bottom footer styling */
+.bottom-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px var(--space-md);
+
+    background-color: #3b3b3b;
+    color: #fff;
+
+}
+/* move cookie settings to left*/
+.copyrights {
+    display: flex;
+    justify-content: space-between;
+}

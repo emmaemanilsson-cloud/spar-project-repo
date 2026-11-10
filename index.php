@@ -3,6 +3,9 @@
 
 
 <main>
+
+<!-- banner section -->
+
     <!-- Hero section -->
     <section class="hero">
         <h1>Skapad för <br>
@@ -24,10 +27,9 @@
     </section>
 
 
-    <!-- Hero -->
-    <!-- caourosell -->
     <!-- newsletter -->
     <!-- Insta-gallery -->
+    <section class="insta-section"></section>
 </main>
 
 <?php require_once 'includes/footer.php'; ?>

@@ -19,9 +19,10 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
 
@@ -29,7 +30,7 @@
     <!-- Logo and navigation -->
 
     <header class="site-header">
-        <!-- input spar-logo -->
+        <!-- TODO: input spar-logo -->
         <a href="index.php" class="logo-spar">
             <img src="/assets/testImages/layout-placeholder.svg" alt="SPÅR">
         </a>
@@ -39,7 +40,7 @@
             <p>Sök</p>
             <p>Varukorg</p>
 
-            <!--hamburger menu on mobile-->
+            <!-- TODO: hamburger menu on mobile-->
             <button class="menu">
                 menu
             </button>
