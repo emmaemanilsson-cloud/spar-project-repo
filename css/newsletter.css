@@ -1,1 +1,80 @@
+.newsletter-section {
+  display: flex;
+  justify-content: center;
+  height: 488px;
+  padding-inline: var(--space-sm); /*8px*/
+  background-color: #666; /* add to variables?*/
+  /* width: 375px; */
+  width: 100%; /*change back to fixed width when whe make desctop-view*/
+}
 
+/* form */
+
+.newsletter-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md); /*16px*/
+  padding-inline: var(--space-sm); /*8px*/
+  margin-top: 98px;
+  color: var(--Ivory, #f5f3ec); /*apply to all textelements within form*/
+  font-weight: var(
+    --font-weight-regular
+  ); /* 400 – default weight, add to body? */
+  width: 358px;
+}
+
+/* heading */
+
+.newsletter-heading {
+  margin: 0;
+  font-weight: var(--font-weight-bold); /*700*/
+  font-size: var(--font-size-2xl); /*36px*/
+  text-align: center;
+}
+
+/* paragraph */
+
+.newsletter-p {
+  font-size: var(--space-md); /*16px*/
+  text-align: center;
+}
+
+/* fieldset */
+
+.email-field {
+  border: none;
+  margin: 0;
+  padding: 0; /*border, ,argin, padding default – add to reset.css?*/
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm); /*8px*/
+  width: 100%;
+  padding-inline: var(--space-sm); /*8px*/
+  padding-bottom: var(--space-sm); /*8px*/
+}
+
+/* label ev. add class if we want it to differ from eventual label in footer? */
+label {
+  font-size: var(--font-size-xs);
+}
+
+#email {
+  align-self: stretch;
+  width: 100%;
+  /* add lineheight to input field? */
+}
+
+/* submit button */
+.newsletter-button {
+  border: none; /*add to reset.css?*/
+  padding: var(--space-sm); /*8px*/
+  width: 340px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--Ivory, #f5f3ec);
+  background-color: var(--charcoal);
+  font-weight: 600;
+}
