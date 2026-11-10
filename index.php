@@ -4,7 +4,7 @@
 
 <main>
 
-<!-- banner section -->
+    <!-- banner section -->
 
     <!-- Hero section -->
     <section class="hero">
@@ -28,6 +28,19 @@
 
 
     <!-- newsletter -->
+    <form>
+        <p>
+            Din e-postadress
+        </p>
+        <p>
+            <input type="email" placeholder="exampel@mail.com">
+        </p>
+        <button class="email-button">
+            Registrera dig
+        </button>
+    </form>
+
+
     <!-- Insta-gallery -->
     <section class="insta-section"></section>
 </main>
