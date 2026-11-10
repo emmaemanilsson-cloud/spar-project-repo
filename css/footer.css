@@ -8,6 +8,13 @@
     border-bottom: 1px solid #000;
 
 }
+/* text folding out */
+.accordion details p {
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+   
+}
 
 /* accordion styling */
 .accordion summary {
@@ -18,10 +25,16 @@
     list-style: none;
     width: 100%;
 
+    font-size: var(--font-size-md);
     text-transform: uppercase;
     letter-spacing: 2px;
     
 }
+
+.accordion summary + p {
+    margin-top: 16px;
+}
+
 /* when accordion is closed */
 .accordion summary::after {
     content: "+";
@@ -47,4 +60,61 @@
 .copyrights {
     display: flex;
     justify-content: space-between;
+}
+
+/* newsletter section */
+.newsletter-footer {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 20px;
+
+}
+/* headline newsletter */
+.newsletter-footer h3 {
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 2px;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+}
+
+/* paragraph newsletter */
+.newsletter-footer p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.newsletter-footer form {
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+    
+
+}
+/*email box*/
+.newsletter-footer input {
+    background-color: #fff;
+    color: #565656;
+    border: 0.2px solid #000;
+    flex-grow: 1;
+    min-width: 0;
+
+}
+/* button */
+.newsletter-footer button {
+    text-transform: uppercase;
+    background-color: #000;
+    color:#fff;
+    font-size: var(--font-size-xs);
+    padding: 8px;
+    border: none;
+    font-weight: var(--font-weight-bold);
+
+}
+
+/* TODO: this is not accessible - needs better code */
+/*label text needs to be hidden, but for accesabillity it has to stay in HTML*/
+.visually-hidden {
+    display: none;
 }
