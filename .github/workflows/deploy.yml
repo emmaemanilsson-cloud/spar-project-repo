@@ -1,0 +1,40 @@
+
+name: Deploy to One.com
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: one-com-deployment
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Publish website
+    runs-on: ubuntu-24.04
+
+    steps:
+      # Hämta filerna från GitHub-repot
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        
+          
+      # Ladda upp filerna till One.com
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 22
+          sftp_only: true
+          sftpArgs: ''
+          local_path: './*'
+          remote_path: '/webroots/f18c9757'
+          delete_remote_files: false

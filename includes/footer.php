@@ -32,9 +32,9 @@
         <p>Prenumerera på vårt nyhetsbrev och få 10 % rabatt på din första beställning</p>
         <form>
             <!-- the label need to be hidden in css-->
-        <label for="email" class="visually-hidden-footer">Din e-postadress</label>
-        <input type="email" name="email" id="email" placeholder="Din e-postadress" required>
-        <button type="submit">Registrera dig</button>
+          <label for="footer-email" class="visually-hidden-footer">Din e-postadress</label>
+          <input type="email" name="email" id="footer-email" placeholder="Din e-postadress" required>
+          <button type="submit">Registrera dig</button>
 </form>
     </div>
 
