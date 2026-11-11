@@ -50,7 +50,13 @@
 
 
     <!-- Insta-gallery -->
-    <section class="insta-section"></section>
+    <section class="insta-section">
+        <p class="instagallery-p">Få inspiration varje dag @sparoutdoor</p>
+        <div class="instagrid-conmtainer">
+            <!-- loop through array to get each image (src and alt) -->
+            <img src="" alt="">
+        </div>
+    </section>
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
