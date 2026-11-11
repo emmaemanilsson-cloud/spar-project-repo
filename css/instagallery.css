@@ -1,1 +1,43 @@
+.insta-section {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  /* width: 343px; */
+  width: 100%;
+  align-items: center;
+  gap: var(--space-md); /*16px*/
+  padding: var(--space-md); /*16px*/
+}
 
+/* heading */
+.instagallery-heading {
+  margin: 0;
+  margin-top: 24px;
+  width: 100%;
+  align-self: stretch;
+  color: #000;
+  font-size: var(--font-size-xl); /*32px*/
+  font-weight: var(--font-weight-semibold); /*600*/
+}
+
+/* grid */
+
+.img-container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  row-gap: 16px;
+  column-gap: 16px;
+  flex-shrink: 0;
+  grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: row;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.insta-img {
+  width: 100%;
+  height: 100%;
+}
