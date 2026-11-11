@@ -1,5 +1,7 @@
-<?php require_once 'includes/header.php'; ?>
-
+<?php
+require_once 'includes/header.php';
+require_once __DIR__ . '/data.php';
+?>
 
 
 <main>
