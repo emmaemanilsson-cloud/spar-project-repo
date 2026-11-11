@@ -53,10 +53,14 @@ require_once __DIR__ . '/data.php';
 
     <!-- Insta-gallery -->
     <section class="insta-section">
-        <p class="instagallery-p">Få inspiration varje dag @sparoutdoor</p>
+        <h2 class="instagallery-heading">Få inspiration varje dag @sparoutdoor</h2>
         <div class="instagrid-conmtainer">
-            <!-- loop through array to get each image (src and alt) -->
-            <img src="" alt="">
+            <div class="img-container">
+                <!-- loop through array to get each image (src and alt) -->
+                <?php foreach ($images as $image): ?>
+                    <img class="insta-img" src="<?= $image['src']; ?>" alt="<?= $image['alt']; ?>">
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
 </main>

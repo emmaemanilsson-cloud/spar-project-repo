@@ -4,27 +4,28 @@
 
 $images = [
     [
-        'src' => "pexels-andreas-schnabl-1775843-19429867.jpg",
+        'src' => "assets/testImages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "pexels-andreas-schnabl-1775843-19429867.jpg",
+        'src' => "assets/testImages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "pexels-andreas-schnabl-1775843-19429867.jpg",
+        'src' => "assets/testImages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "pexels-andreas-schnabl-1775843-19429867.jpg",
+        'src' => "assets/testImages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "pexels-andreas-schnabl-1775843-19429867.jpg",
+        'src' => "assets/testImages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "pexels-andreas-schnabl-1775843-19429867.jpg",
+        'src' => "assets/testImages/insta.jpg",
         'alt' => "productimage"
-    ]
+    ],
+
 ];
