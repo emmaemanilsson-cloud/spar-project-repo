@@ -1,5 +1,7 @@
-<?php require_once 'includes/header.php'; ?>
-
+<?php
+require_once 'includes/header.php';
+require_once __DIR__ . '/data.php';
+?>
 
 
 <main>
@@ -50,7 +52,17 @@
 
 
     <!-- Insta-gallery -->
-    <section class="insta-section"></section>
+    <section class="insta-section">
+        <h2 class="instagallery-heading">Få inspiration varje dag @sparoutdoor</h2>
+        <div class="instagrid-conmtainer">
+            <div class="img-container">
+                <!-- loop through array to get each image (src and alt) -->
+                <?php foreach ($images as $image): ?>
+                    <img class="insta-img" src="<?= $image['src']; ?>" alt="<?= $image['alt']; ?>">
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php require_once 'includes/footer.php'; ?>
