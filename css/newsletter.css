@@ -92,6 +92,7 @@ label {
   .newsletter-section form {
     margin-block: 365px;
     width: 555px;
+    padding: 0;
   }
 
   .newsletter-heading {
@@ -104,11 +105,7 @@ label {
     font-weight: var(--font-weight-regular); /*400*/
   }
 
-  #email {
-    width: 358px;
-  }
-
-  .newsletter-button {
+  .email-field {
     width: 358px;
   }
 }
