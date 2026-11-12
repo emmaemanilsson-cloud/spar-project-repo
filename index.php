@@ -30,9 +30,9 @@ require_once __DIR__ . '/data.php';
 
 
     <!-- In mobile view - 3D-view-section display:none? -->
-    <section class="3D-viewer-section">
-        <h3>I blickfånget</h3>
-        <div class="3D-viewer-box"></div>
+    <section class="viewer-section">
+        <h3 class="viewer-heading">I blickfånget</h3>
+        <div class="viewer-box"></div>
         <!-- Placeholder for color selection below 3D-animation -->
         <span class="color-selector">&#x25C9 &#x25C9 &#x25C9</span> <!--html unicode in hex for geometric shape (fisheye)-->
     </section>

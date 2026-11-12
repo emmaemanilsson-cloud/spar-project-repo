@@ -1,1 +1,36 @@
+.viewer-section {
+  height: 790px;
+  margin-bottom: 64px;
+  margin: 32px 16px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md); /*16px*/
+}
 
+.viewer-heading {
+  padding: 0;
+  margin: 0;
+  font-weight: var(--font-weight-semibold); /*600*/
+  font-size: 32px;
+  font-size: var(--font-size-xl); /*32px*/
+}
+
+.viewer-box {
+  background-color: lightgray;
+  height: 667px;
+}
+
+.color-selector {
+  margin-top: var(--space-md); /*16px*/
+  height: var(--space-md);
+  color: lightgray;
+  font-size: 32px; /*make the circles bigger to imitate design visually*/
+  text-align: center;
+}
+
+/* set display none on mobile view */
+@media (max-width: 600px) {
+  .viewer-section {
+    display: none;
+  }
+}
