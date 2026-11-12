@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/3Dviewer.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/newsletter.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/instagallery.css?id=<?= filemtime('css/instagallery.css'); ?>">
     <link rel="stylesheet" href="css/footer.css">
@@ -49,7 +50,7 @@
             <a href="#">Utrustning</a>
 
         </div>
-        
+
         <div class="header-icons">
 
             <p>Sök</p>
