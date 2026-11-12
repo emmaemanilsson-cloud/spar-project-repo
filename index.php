@@ -54,7 +54,7 @@ require_once __DIR__ . '/data.php';
     <!-- Insta-gallery -->
     <section class="insta-section">
         <h2 class="instagallery-heading">Få inspiration varje dag @sparoutdoor</h2>
-        <div class="instagrid-conmtainer">
+        <div class="instagrid-container">
             <div class="img-container">
                 <!-- loop through array to get each image (src and alt) -->
                 <?php foreach ($images as $image): ?>

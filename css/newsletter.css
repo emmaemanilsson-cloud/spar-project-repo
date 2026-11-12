@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   height: 488px;
-  margin-top: 98px;
   padding-inline: var(--space-sm); /*8px*/
   background-color: #666; /* add to variables?*/
   /* width: 375px; */
@@ -17,6 +16,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--space-md); /*16px*/
+  margin-top: 98px;
   padding-inline: var(--space-sm); /*8px*/
   color: var(--Ivory, #f5f3ec); /*apply to all textelements within form*/
   font-weight: var(
@@ -60,6 +60,9 @@ label {
   font-size: var(--font-size-xs);
 }
 
+/* input field */
+
+/* TO DO! varför det ej går att ändra bredd */
 #email {
   align-self: stretch;
   width: 100%;
@@ -77,4 +80,32 @@ label {
   color: var(--Ivory, #f5f3ec);
   background-color: var(--charcoal);
   font-weight: 600;
+}
+
+/* media queries desctop view */
+@media (min-width: 600px) {
+  .newsletter-section {
+    height: 1026px;
+    align-self: stretch;
+  }
+
+  .newsletter-section form {
+    margin-block: 365px;
+    width: 555px;
+    padding: 0;
+  }
+
+  .newsletter-heading {
+    font-size: var(--font-size-5xl); /*64px*/
+    font-weight: var(--font-weight-bold); /*700*/
+  }
+
+  .newsletter-p {
+    font-size: var(--font-size-md); /*16px*/
+    font-weight: var(--font-weight-regular); /*400*/
+  }
+
+  .email-field {
+    width: 358px;
+  }
 }
