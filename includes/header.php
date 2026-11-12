@@ -29,7 +29,12 @@
 </head>
 
 <body>
-    <!-- Logo and navigation -->
+    <!-- banner section. needs an id from newsletter-section in index.-->
+    <div class="marquee-bar">
+
+        <a href="#">
+        </a>
+    </div>
 
     <header class="site-header">
         <!-- TODO: input spar-logo -->
@@ -37,15 +42,26 @@
             <img src="/assets/testImages/layout-placeholder.svg" alt="SPÅR">
         </a>
 
+        <div class="desktop-only">
+            <a href="#">Dam</a>
+            <a href="#">Herr</a>
+            <a href="#">Rea</a>
+            <a href="#">Utrustning</a>
+
+        </div>
+        
         <div class="header-icons">
 
             <p>Sök</p>
-            <p>Varukorg</p>
+            <p>Varukorg (0)</p>
 
-            <!-- TODO: hamburger menu on mobile-->
-            <button class="menu">
-                menu
+
+            <button class="hamburger-menu" type="button" aria-label="">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
+
 
     </header>
