@@ -3,17 +3,19 @@
     padding: var(--space-md);
 }
 
+/* when accordion is closed */
 .accordion details {
     padding: 20px var(--space-md);
     border-bottom: 1px solid #000;
-
 }
+
 /* text folding out */
 .accordion details a {
     display: block;
     font-size: var(--font-size-xs);
     padding: 5px 0;
     text-decoration: none;
+    
     color: #000;
 }
 
@@ -31,7 +33,6 @@
     letter-spacing: 2px; 
 }
 
-
 /* space between open accordion and first paragraph*/
 .accordion summary + a {
     margin-top: 16px;
@@ -47,15 +48,14 @@
     content: "-";
 }
 
-
 /* newsletter section parent*/
 .newsletter-footer {
     display: flex;
     flex-direction: column;
     align-self: stretch;
     padding: 20px;
-    
 }
+
 /* headline newsletter -NYHETSBREV- */
 .newsletter-footer h3 {
     text-transform: uppercase;
@@ -70,33 +70,33 @@
     font-size: 18px;
     font-weight: 300;
 }
+
 /* newsletter form parent*/
 .newsletter-footer form {
     display: flex;
     width: 100%;
-    margin-top: 12px;
-    
+    margin-top: 12px;  
 }
 
 /* email box */
 .newsletter-footer input {
-    background-color: #fff;
-    color: #565656;
-    border: 0.2px solid #000;
     flex-grow: 1;
     min-width: 0;
     
+    background-color: #fff;
+    color: #565656;
+    border: 0.2px solid #000;
 }
 /* reg. button */
 .newsletter-footer button {
     text-transform: uppercase;
-    background-color: #000;
-    color:#fff;
     font-size: var(--font-size-xs);
-    padding: 8px;
+    padding: 9px;
     border: none;
     font-weight: var(--font-weight-bold);
     
+    background-color: #000;
+    color:#fff;
 }
 
 /* TODO: this is not accessible - needs better code */
@@ -109,17 +109,23 @@
 .bottom-footer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
     padding: 20px var(--space-md);
 
     background-color: #3b3b3b;
     color: #fff;
-
 }
-/* TODO: move cookie settings to left */
+
+
+.language {
+    font-weight: 300;
+}
+
+/* this part is not exactly as mobile, but i think its good enough */
 .copyrights {
     display: flex;
     justify-content: space-between;
+    font-weight: var(--font-weight-medium);
 }
 
 /* TODO (Jessica):
@@ -129,26 +135,28 @@
    when switching between mobile and desktop.
    (Keep the accordion functionality on mobile.)
    Needs something called matchMedia() in JS
+   Also - OK to change the whole setup to JS
 */
 @media (min-width: 768px) {
+/* Split footer into two equal columns */
     .footer-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: start;
-    
-
     }
+
+/* Display accordion sections side by side */
     .accordion {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-        
     }
     
     .accordion summary {
         margin-bottom: 16px;
     }
-    
+
+/* Remove mobile accordion styling */
     .accordion details {
         padding: 0;
         border: none;
@@ -162,26 +170,26 @@
         display: none;
     }
 
+/* Adjust newsletter spacing for desktop */
     .newsletter-footer {
         padding: 0px 16px 64px 0px;
-    
     }
 
       .newsletter-footer h3 {
        margin-bottom: 64px;
     
     }
-
+/* Align copyright links to the left */
     .copyrights {
         justify-content: flex-start;
         gap: 24px;
 }
-    
+
+/* Make bottom footer span the full grid width */
     .bottom-footer {
         grid-column: 1 / -1;
         align-items: flex-start;
         gap: 52px;
-        padding: 24px;
-        
+        padding: 24px; 
     }
 }
