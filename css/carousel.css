@@ -9,8 +9,9 @@
 }
 
 .carousel-placeholder h2 {
-
+    font-size: var(--font-size-xl);
     padding: var(--space-md);
+    font-weight: var(--font-weight--semibold);
 }
 
 .placeholder-box {

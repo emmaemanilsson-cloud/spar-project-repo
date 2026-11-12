@@ -3,18 +3,27 @@
     <div class="accordion">
         <details name="footer-accordion">
             <summary>Kundservice</summary>
-            <p>Kontakta oss</p><br>
-            <p>Vanliga frågor</p>
+            <a href="#">Frakt & leverans</a>
+            <a href="#">Returer & byte</a>
+            <a href="#">storleksguide</a>
+            <a href="#">FAQ</a>
+            <a href="#">Kontakta oss</a>
         </details>
 
         <details name="footer-accordion">
             <summary>Om oss</summary>
-            <p>text</p>
+            <a href="#">Vår historia</a>
+            <a href="#">Hållbarhet & material</a>
+            <a href="#">Kärriär</a>
+            <a href="#">Butiker</a>
         </details>
 
         <details name="footer-accordion">
             <summary>Annat</summary>
-            <p>text</p>
+            <a href="#">Köpvillkor</a>
+            <a href="#">Integritetspolicy</a>
+            <a href="#">Rabattkod & Erbjudanden</a>
+            <a href="#">Affiliate</a>
         </details>
     </div>
 
@@ -23,9 +32,9 @@
         <p>Prenumerera på vårt nyhetsbrev och få 10 % rabatt på din första beställning</p>
         <form>
             <!-- the label need to be hidden in css-->
-        <label for="footer-email" class="visually-hidden">Din e-postadress</label>
-        <input type="email" name="email" id="footer-email" placeholder="Din e-postadress" required>
-        <button type="submit">Registrera dig</button>
+          <label for="footer-email" class="visually-hidden-footer">Din e-postadress</label>
+          <input type="email" name="email" id="footer-email" placeholder="Din e-postadress" required>
+          <button type="submit">Registrera dig</button>
 </form>
     </div>
 

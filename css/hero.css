@@ -2,12 +2,13 @@ body {
     font-family: var(--font-body);
 
 }
-
+/* Hero section */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    width: 100%;
+    min-height: 100dvh;
 
     background-image: 
         url("../assets/testImages/pexels-andreas-schnabl-1775843-19429867.jpg");
@@ -16,6 +17,7 @@ body {
     background-repeat: no-repeat;
 }
 
+/* hero section text */
 .hero h1 {
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);

@@ -9,14 +9,15 @@
 
 }
 /* text folding out */
-.accordion details p {
-    font-size: var(--font-size-sm);
-    text-transform: uppercase;
-    border-bottom: 1px solid #000;
-   
+.accordion details a {
+    display: block;
+    font-size: var(--font-size-xs);
+    padding: 5px 0;
+    text-decoration: none;
+    color: #000;
 }
 
-/* accordion styling */
+/* general accordion styling */
 .accordion summary {
     display: flex;
     justify-content: space-between;
@@ -27,11 +28,12 @@
 
     font-size: var(--font-size-md);
     text-transform: uppercase;
-    letter-spacing: 2px;
-    
+    letter-spacing: 2px; 
 }
 
-.accordion summary + p {
+
+/* space between open accordion and first paragraph*/
+.accordion summary + a {
     margin-top: 16px;
 }
 
@@ -45,32 +47,16 @@
     content: "-";
 }
 
-/* bottom footer styling */
-.bottom-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px var(--space-md);
 
-    background-color: #3b3b3b;
-    color: #fff;
-
-}
-/* move cookie settings to left*/
-.copyrights {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* newsletter section */
+/* newsletter section parent*/
 .newsletter-footer {
     display: flex;
     flex-direction: column;
     align-self: stretch;
     padding: 20px;
-
+    
 }
-/* headline newsletter */
+/* headline newsletter -NYHETSBREV- */
 .newsletter-footer h3 {
     text-transform: uppercase;
     color: #000;
@@ -84,24 +70,24 @@
     font-size: 18px;
     font-weight: 300;
 }
-
+/* newsletter form parent*/
 .newsletter-footer form {
     display: flex;
     width: 100%;
     margin-top: 12px;
     
-
 }
-/*email box*/
+
+/* email box */
 .newsletter-footer input {
     background-color: #fff;
     color: #565656;
     border: 0.2px solid #000;
     flex-grow: 1;
     min-width: 0;
-
+    
 }
-/* button */
+/* reg. button */
 .newsletter-footer button {
     text-transform: uppercase;
     background-color: #000;
@@ -110,11 +96,92 @@
     padding: 8px;
     border: none;
     font-weight: var(--font-weight-bold);
-
+    
 }
 
 /* TODO: this is not accessible - needs better code */
 /*label text needs to be hidden, but for accesabillity it has to stay in HTML*/
-.visually-hidden {
+.visually-hidden-footer {
     display: none;
+}
+
+/* bottom footer styling */
+.bottom-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px var(--space-md);
+
+    background-color: #3b3b3b;
+    color: #fff;
+
+}
+/* TODO: move cookie settings to left */
+.copyrights {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* TODO (Jessica):
+   On desktop, all accordion links should be visible
+   without clicking the summary. (the click function needs to go)
+   Needs JavaScript to handle the <details> elements
+   when switching between mobile and desktop.
+   (Keep the accordion functionality on mobile.)
+   Needs something called matchMedia() in JS
+*/
+@media (min-width: 768px) {
+    .footer-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    
+
+    }
+    .accordion {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        
+    }
+    
+    .accordion summary {
+        margin-bottom: 16px;
+    }
+    
+    .accordion details {
+        padding: 0;
+        border: none;
+    }
+    
+    .accordion summary::after {
+        display: none;
+    }
+    
+    .accordion details::after {
+        display: none;
+    }
+
+    .newsletter-footer {
+        padding: 0px 16px 64px 0px;
+    
+    }
+
+      .newsletter-footer h3 {
+       margin-bottom: 64px;
+    
+    }
+
+    .copyrights {
+        justify-content: flex-start;
+        gap: 24px;
+}
+    
+    .bottom-footer {
+        grid-column: 1 / -1;
+        align-items: flex-start;
+        gap: 52px;
+        padding: 24px;
+        
+    }
 }
