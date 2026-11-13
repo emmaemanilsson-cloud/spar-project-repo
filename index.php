@@ -29,6 +29,14 @@ require_once __DIR__ . '/data.php';
     </section>
 
 
+    <section class="viewer-section">
+        <h3 class="viewer-heading">I blickfånget</h3>
+        <div class="viewer-box"></div>
+        <!-- Placeholder for color selection below 3D-animation -->
+        <span class="color-selector">&#x25C9 &#x25C9 &#x25C9</span> <!--html unicode in hex for geometric shape (fisheye)-->
+    </section>
+
+
     <!-- newsletter -->
     <section class="newsletter-section">
         <form>
@@ -54,7 +62,7 @@ require_once __DIR__ . '/data.php';
     <!-- Insta-gallery -->
     <section class="insta-section">
         <h2 class="instagallery-heading">Få inspiration varje dag @sparoutdoor</h2>
-        <div class="instagrid-conmtainer">
+        <div class="instagrid-container">
             <div class="img-container">
                 <!-- loop through array to get each image (src and alt) -->
                 <?php foreach ($images as $image): ?>
