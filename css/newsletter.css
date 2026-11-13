@@ -1,7 +1,7 @@
 .newsletter-section {
   display: flex;
   justify-content: center;
-  height: 488px;
+  min-height: 488px;
   padding-inline: var(--space-sm); /*8px*/
   background-color: #666; /* add to variables?*/
   /* width: 375px; */
@@ -22,7 +22,8 @@
   font-weight: var(
     --font-weight-regular
   ); /* 400 – default weight, add to body? */
-  width: 358px;
+  width: 100%;
+  max-width: 400px;
 }
 
 /* heading */
@@ -39,6 +40,8 @@
 .newsletter-p {
   font-size: var(--space-md); /*16px*/
   text-align: center;
+  line-height: 1.6;
+  text-wrap: balance;
 }
 
 /* fieldset */
@@ -46,11 +49,13 @@
 .email-field {
   border: none;
   margin: 0;
-  padding: 0; /*border, ,argin, padding default – add to reset.css?*/
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm); /*8px*/
   width: 100%;
+  min-width: 0;
+  align-self: stretch;
   padding-bottom: var(--space-sm); /*8px*/
 }
 
@@ -60,21 +65,17 @@ label {
 }
 
 /* input field */
-
-/* TO DO! varför det ej går att ändra bredd */
 #email {
-  align-self: stretch;
   width: 100%;
-  /* add lineheight to input field? */
+  padding: 6px;
 }
 
 /* submit button */
 .newsletter-button {
   border: none; /*add to reset.css?*/
   padding: var(--space-sm); /*8px*/
-  width: 340px;
+  width: 100%;
   justify-content: center;
-  align-items: center;
   text-transform: uppercase;
   color: var(--Ivory, #f5f3ec);
   background-color: var(--charcoal);
@@ -90,7 +91,8 @@ label {
 
   .newsletter-section form {
     margin-block: 365px;
-    width: 555px;
+    width: 100%;
+    max-width: 800px;
   }
 
   .newsletter-heading {
@@ -101,6 +103,11 @@ label {
   .newsletter-p {
     font-size: var(--font-size-md); /*16px*/
     font-weight: var(--font-weight-regular); /*400*/
+  }
+
+  .email-field {
+    align-self: center;
+    width: 358px;
   }
 
   #email {

@@ -30,11 +30,37 @@
 </head>
 
 <body>
-    <!-- banner section. needs an id from newsletter-section in index.-->
-    <div class="marquee-bar">
+    <!-- banner section. 2 variants. change to eighter depending witch one we like-->
 
-        <a href="#">
-        </a>
+    <!--<div class="banner-container banner-fade">-->
+    <div class="banner-container banner-scroll">
+        <div class="banner-slide">
+            <!-- duplicated bannergroups for sliding banner-->
+            <div class="banner-group">
+
+                <a href="#newsletter">
+                    <span>10% på ditt första köp</span>
+                    <span>30 dagars öppet köp</span>
+                    <span>Design for life outdoors</span>
+                </a>
+            </div>
+            <div class="banner-group" aria-hidden="true">
+
+                <a href="#newsletter" tabindex="-1">
+                    <span>10% på ditt första köp</span>
+                    <span>30 dagars öppet köp</span>
+                    <span>Design for life outdoors</span>
+                </a>
+            </div>
+            <div class="banner-group" aria-hidden="true">
+
+                <a href="#newsletter" tabindex="-1">
+                    <span>10% på ditt första köp</span>
+                    <span>30 dagars öppet köp</span>
+                    <span>Design for life outdoors</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <header class="site-header">
