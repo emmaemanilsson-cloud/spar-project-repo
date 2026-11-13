@@ -51,7 +51,6 @@
   flex-direction: column;
   gap: var(--space-sm); /*8px*/
   width: 100%;
-  padding-inline: var(--space-sm); /*8px*/
   padding-bottom: var(--space-sm); /*8px*/
 }
 
@@ -92,7 +91,6 @@ label {
   .newsletter-section form {
     margin-block: 365px;
     width: 555px;
-    padding: 0;
   }
 
   .newsletter-heading {
@@ -105,7 +103,11 @@ label {
     font-weight: var(--font-weight-regular); /*400*/
   }
 
-  .email-field {
+  #email {
+    width: 358px;
+  }
+
+  .newsletter-button {
     width: 358px;
   }
 }
