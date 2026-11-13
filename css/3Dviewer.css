@@ -1,7 +1,6 @@
 .viewer-section {
-  height: 790px;
-  margin-bottom: 64px;
-  margin: 32px 16px 64px;
+  height: 456px;
+  margin: var(--space-md); /*16px*/
   display: flex;
   flex-direction: column;
   gap: var(--space-md); /*16px*/
@@ -10,27 +9,43 @@
 .viewer-heading {
   padding: 0;
   margin: 0;
+  margin-top: var(--space-md); /*16px*/
   font-weight: var(--font-weight-semibold); /*600*/
-  font-size: 32px;
+  font-size: var(--font-size-xl); /*32px*/
   font-size: var(--font-size-xl); /*32px*/
 }
 
 .viewer-box {
   background-color: lightgray;
-  height: 667px;
+  height: 334px;
 }
 
 .color-selector {
-  margin-top: var(--space-md); /*16px*/
   height: var(--space-md);
   color: lightgray;
-  font-size: 32px; /*make the circles bigger to imitate design visually*/
+  font-size: var(
+    --font-size-sm
+  ); /*make the circles bigger to imitate design visually*/
   text-align: center;
+  padding-block: var(--space-sm); /*8px*/
 }
 
-/* set display none on mobile view */
-@media (max-width: 600px) {
+/* desctop view */
+@media (min-width: 600px) {
   .viewer-section {
-    display: none;
+    height: 790px;
+    margin-bottom: 64px;
+    margin-top: var(--space-lg); /*32px*/
+  }
+
+  .viewer-box {
+    height: 667px;
+  }
+
+  .color-selector {
+    margin-top: var(--space-md); /*16px*/
+    font-size: var(
+      --font-size-xl
+    ); /*make the circles bigger to imitate design visually*/
   }
 }

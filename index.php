@@ -29,7 +29,6 @@ require_once __DIR__ . '/data.php';
     </section>
 
 
-    <!-- In mobile view - 3D-view-section display:none? -->
     <section class="viewer-section">
         <h3 class="viewer-heading">I blickfånget</h3>
         <div class="viewer-box"></div>
