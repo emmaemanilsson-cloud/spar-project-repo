@@ -38,7 +38,7 @@ require_once __DIR__ . '/data.php';
 
 
     <!-- newsletter -->
-    <section class="newsletter-section">
+    <section class="newsletter-section" id="newsletter">
         <form>
             <!-- In wireframe heading newsletter is set to h1, use h2 instead? -->
             <h2 class="newsletter-heading">Följ vår resa</h2>
@@ -49,7 +49,7 @@ require_once __DIR__ . '/data.php';
             <fieldset class="email-field">
                 <label for="email">Din e-postadress</label>
                 <!-- Added placeholder with example-mail -->
-                <input type="email" id="'email" name="email" placeholder="example@mail.com">
+                <input type="email" id="email" name="email" placeholder="example@mail.com">
             </fieldset>
             <button type="submit" class="newsletter-button">
                 Registrera dig

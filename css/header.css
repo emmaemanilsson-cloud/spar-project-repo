@@ -2,6 +2,57 @@ body {
     font-family: var(--font-body);
 }
 
+/* banner section*/
+
+/* parent container */
+.banner-container {
+    background-color: #6C6C6C;
+    padding: 8px 0px;
+    overflow: hidden;
+
+    --banner-gap: 90px;
+}
+
+.banner-slide {
+    display: flex;
+    gap: var(--banner-gap);
+    white-space: nowrap;
+    width: max-content;
+}
+
+.banner-slide a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* animation */
+@keyframes scroll {
+    from {
+        transform: translate(0%);
+    }
+
+    to {
+        /* 3 identical groups, 90px gap. Move exactly one group forward. */
+        transform: translateX(calc(-100% - 90px));
+    }
+
+}
+/* animation */
+.banner-scroll .banner-group {
+    animation: scroll 40s linear infinite;
+}
+
+.banner-group {
+    flex-shrink: 0;
+}
+
+.banner-group a {
+    display: flex;
+    gap: var(--banner-gap);
+}
+
+/* header section */
+
 .header-icons p {
     margin: 0;
 }
@@ -85,5 +136,18 @@ body {
 
     .hamburger-menu {
         display: none;
+    }
+}
+
+/* desktop banner. more gap between text */
+@media (min-width: 768px) {
+    .banner-container {
+        --banner-gap: 150px;
+    }
+}
+/* Acessabillity */
+@media (prefers-reduced-motion: reduce) {
+    .banner-scroll .banner-group {
+        animation: none;
     }
 }
