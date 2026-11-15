@@ -199,9 +199,32 @@ body {
     }
 
     .desktop-only a {
+        position: relative;
         text-decoration: none;
 
         color: var(--ivory);
+    }
+    /* hovereffect on links - desktop*/
+    .desktop-only a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+
+        /* the look on the hoverline */
+        width: 100%;
+        height: 2px;
+        background-color: var(--ivory);
+
+        /* animation - line scales from left, grows in 0.3 sek */
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+
+    }
+    /* the line scales to full */
+    .desktop-only a:hover::after {
+        transform: scaleX(1);
     }
 
     .hamburger-menu {

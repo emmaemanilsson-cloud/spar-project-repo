@@ -17,16 +17,16 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/3Dviewer.css?id=<?= filemtime('css/newsletter.css'); ?>">
+    <link rel="stylesheet" href="css/reset.css?id=<?= filemtime('css/reset.css'); ?>">
+    <link rel="stylesheet" href="css/variables.css?id=<?= filemtime('css/variables.css'); ?>">
+    <link rel="stylesheet" href="css/header.css?id=<?= filemtime('css/header.css'); ?>">
+    <link rel="stylesheet" href="css/hero.css?id=<?= filemtime('css/hero.css'); ?>">
+    <link rel="stylesheet" href="css/about.css?id=<?= filemtime('css/about.css'); ?>">
+    <link rel="stylesheet" href="css/carousel.css?id=<?= filemtime('css/carousel.css'); ?>">
+    <link rel="stylesheet" href="css/3Dviewer.css?id=<?= filemtime('css/3Dviewer.css'); ?>">
     <link rel="stylesheet" href="css/newsletter.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/instagallery.css?id=<?= filemtime('css/instagallery.css'); ?>">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/footer.css?id=<?= filemtime('css/footer.css'); ?>">
 
 </head>
 
