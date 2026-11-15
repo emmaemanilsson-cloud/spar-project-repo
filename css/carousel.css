@@ -6,12 +6,16 @@
     grid-template-columns: 1fr;
     gap: var(--space-md);
     padding: var(--space-md);
+    
 }
 
 .carousel-placeholder h2 {
     font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
     padding: var(--space-md);
-    font-weight: var(--font-weight--semibold);
+    margin: 0; 
+
+    color: var(--charcoal);
 }
 
 .placeholder-box {

@@ -24,7 +24,7 @@ body {
     text-align: center;
     padding: var(--space-md);
 
-    color: #fff;
+    color: var(--ivory);
 }
 
 @media (min-width: 768px) {

@@ -13,6 +13,8 @@
   font-weight: var(--font-weight-semibold); /*600*/
   font-size: var(--font-size-xl); /*32px*/
   font-size: var(--font-size-xl); /*32px*/
+
+  color: var(--charcoal);
 }
 
 .viewer-box {

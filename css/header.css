@@ -2,7 +2,7 @@ body {
     font-family: var(--font-body);
 }
 
-/* banner section*/
+/* banner section scroll mobile */
 
 /* parent container */
 .banner-container {
@@ -23,9 +23,9 @@ body {
 .banner-slide a {
     text-decoration: none;
     color: #000;
-}
 
-/* animation */
+}
+/* animation banner section scroll */
 @keyframes scroll {
     from {
         transform: translate(0%);
@@ -33,7 +33,7 @@ body {
 
     to {
         /* 3 identical groups, 90px gap. Move exactly one group forward. */
-        transform: translateX(calc(-100% - 90px));
+        transform: translateX(calc(-100% - var(--banner-gap)));
     }
 
 }
@@ -50,11 +50,76 @@ body {
     display: flex;
     gap: var(--banner-gap);
 }
+/* end banner section scroll mobile*/
+
+
+/* banner section fade */
+
+.banner-fade .banner-slide {
+    display: grid;
+    width: 100%;
+}
+
+.banner-fade .banner-group {
+    grid-area: 1 / 1;
+    width: 100%;
+}
+
+.banner-fade .banner-group a {
+        display: grid;
+        place-items: center;
+}
+/* Animation st to 12 sek */
+.banner-fade .banner-group span {
+    grid-area: 1 / 1;
+    opacity: 0;
+    animation: fade 12s ease-in-out infinite;
+}
+/* 8sek left of loop */
+.banner-fade .banner-group span:nth-child(2) {
+    animation-delay: -8s;
+}
+/* 4 sek left of loop */
+.banner-fade .banner-group span:nth-child(3) {
+    animation-delay: -4s;
+}
+/* hides 2 of 3 spansgroups in html*/
+.banner-fade .banner-group:not(:first-child) {
+    display: none;
+}
+
+/* the fade loop*/
+@keyframes fade {
+    /* 0-10 text tones in*/
+    0% { 
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    /* 10-25 text fully shown*/
+    25% {
+        opacity: 1;
+    }
+    /* 25-33 text tones out*/
+    33% {
+        opacity: 0;
+    }
+    /* text invisible*/
+    100%{
+        opacity: 0;
+        }
+    }
+
+    /* end banner section fade*/
+
 
 /* header section */
 
-.header-icons p {
+.header-icons a {
     margin: 0;
+    text-decoration: none;
+    color: var(--ivory);
 }
 
 /* parent container */
@@ -67,6 +132,7 @@ body {
 
     background-color: #B4B4B4;
 }
+
 
 .logo-spar img {
     width: 40px;
@@ -99,7 +165,7 @@ body {
     width: 24px;
     border: none;
 
-    background-color: black;
+    background-color: var(--charcoal);
 }
 
 
@@ -117,21 +183,25 @@ body {
         background-color: #838383;
     }
 
+    .header-icons {
+        justify-self: end;
+
+        color: var(--ivory);
+    }
+
+    .logo-spar {
+        justify-self: start;
+    }
+
     .desktop-only {
         display: flex;
         gap: 70px;
     }
 
-    .header-icons {
-        justify-self: end;
-
-        color: #fff;
-    }
-
     .desktop-only a {
-        
         text-decoration: none;
-        color: #fff;
+
+        color: var(--ivory);
     }
 
     .hamburger-menu {
@@ -144,6 +214,7 @@ body {
     .banner-container {
         --banner-gap: 150px;
     }
+
 }
 /* Acessabillity */
 @media (prefers-reduced-motion: reduce) {
