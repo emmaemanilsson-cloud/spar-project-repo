@@ -6,13 +6,21 @@ require_once __DIR__ . '/data.php';
 
 <main>
 
-    <!-- banner section -->
-
     <!-- Hero section -->
     <section class="hero">
         <h1>Skapad för <br>
             elementen.<br>
             Formad för dig.</h1>
+
+    </section>
+    <!-- About -->
+    <section class="about-section">
+        <h2 class="about-heading">Om kollektionen</h2>
+        <p class="about-p">Den här säsongen får en ikonisk serie en uppdaterad look. De här jackorna i begränsad upplaga kombinerar den pålitliga värmen och de praktiska funktionerna hos Expedition Down Lite Jacket med en ny design med grafiska färgblock.</p>
+        <img 
+        class="img-about" 
+        src="/assets/testimages/72e3bda9fa467fbaacea0b2added85a54afb2344.jpg"
+        alt="example"/>
 
     </section>
 
@@ -29,6 +37,9 @@ require_once __DIR__ . '/data.php';
     </section>
 
 
+
+
+    <!-- i blickfånget -->
     <section class="viewer-section">
         <h3 class="viewer-heading">I blickfånget</h3>
         <div class="viewer-box"></div>

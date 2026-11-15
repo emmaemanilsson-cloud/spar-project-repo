@@ -15,7 +15,7 @@
   margin-top: 24px;
   width: 100%;
   align-self: stretch;
-  color: #000;
+  color: var(--charcoal);
   font-size: var(--font-size-xl); /*32px*/
   font-weight: var(--font-weight-semibold); /*600*/
 }
