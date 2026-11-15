@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/3Dviewer.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/newsletter.css?id=<?= filemtime('css/newsletter.css'); ?>">
@@ -32,8 +33,8 @@
 <body>
     <!-- banner section. 2 variants. change to eighter depending witch one we like-->
 
-    <!--<div class="banner-container banner-fade">-->
-    <div class="banner-container banner-scroll">
+    <!-- <div class="banner-container banner-fade">-->
+   <div class="banner-container banner-scroll">
         <div class="banner-slide">
             <!-- duplicated bannergroups for sliding banner-->
             <div class="banner-group">
@@ -79,8 +80,8 @@
 
         <div class="header-icons">
 
-            <p>Sök</p>
-            <p>Varukorg (0)</p>
+            <a href="#">Sök</a>
+            <a href="#">Varukorg (0)</a>
 
 
             <button class="hamburger-menu" type="button" aria-label="">

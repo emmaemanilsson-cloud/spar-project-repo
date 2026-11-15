@@ -1,6 +1,7 @@
 .newsletter-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   min-height: 488px;
   padding-inline: var(--space-sm); /*8px*/
   background-color: #666; /* add to variables?*/
@@ -15,15 +16,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   gap: var(--space-md); /*16px*/
-  margin-top: 98px;
   padding-inline: var(--space-sm); /*8px*/
+  font-weight: var(--font-weight-regular);
+
   color: var(--Ivory, #f5f3ec); /*apply to all textelements within form*/
-  font-weight: var(
-    --font-weight-regular
-  ); /* 400 – default weight, add to body? */
+
   width: 100%;
   max-width: 400px;
+
 }
 
 /* heading */
@@ -41,7 +43,7 @@
   font-size: var(--space-md); /*16px*/
   text-align: center;
   line-height: 1.6;
-  text-wrap: balance;
+  
 }
 
 /* fieldset */
@@ -72,14 +74,14 @@ label {
 
 /* submit button */
 .newsletter-button {
+  justify-content: center;
   border: none; /*add to reset.css?*/
+  text-transform: uppercase;
+  font-weight: var(--font-weight-semibold);
   padding: var(--space-sm); /*8px*/
   width: 100%;
-  justify-content: center;
-  text-transform: uppercase;
   color: var(--Ivory, #f5f3ec);
   background-color: var(--charcoal);
-  font-weight: 600;
 }
 
 /* media queries desctop view */

@@ -5,7 +5,7 @@
 
 .accordion details {
     padding: 20px var(--space-md);
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--charcoal);
 
 }
 /* text folding out */
@@ -14,7 +14,7 @@
     font-size: var(--font-size-xs);
     padding: 5px 0;
     text-decoration: none;
-    color: #000;
+    color: var(--charcoal);
 }
 
 /* general accordion styling */
@@ -29,6 +29,8 @@
     font-size: var(--font-size-md);
     text-transform: uppercase;
     letter-spacing: 2px; 
+
+    color: var(--charcoal);
 }
 
 
@@ -59,16 +61,18 @@
 /* headline newsletter -NYHETSBREV- */
 .newsletter-footer h3 {
     text-transform: uppercase;
-    color: #000;
     letter-spacing: 2px;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-medium);
+    color: var(--charcoal);
 }
 
 /* paragraph newsletter */
 .newsletter-footer p {
     font-size: 18px;
     font-weight: 300;
+
+    color: var(--charcoal);
 }
 /* newsletter form parent*/
 .newsletter-footer form {
@@ -90,8 +94,8 @@
 /* reg. button */
 .newsletter-footer button {
     text-transform: uppercase;
-    background-color: #000;
-    color:#fff;
+    background-color: var(--charcoal);
+    color: var(--ivory);
     font-size: var(--font-size-xs);
     padding: 8px;
     border: none;
@@ -113,10 +117,10 @@
     padding: 20px var(--space-md);
 
     background-color: #3b3b3b;
-    color: #fff;
+    color: var(--ivory);
 
 }
-/* TODO: move cookie settings to left */
+/* TODO: move cookie settings to left. Or mabye this is good enough??? */
 .copyrights {
     display: flex;
     justify-content: space-between;
