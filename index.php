@@ -19,7 +19,7 @@ require_once __DIR__ . '/data.php';
         <p class="about-p">Den här säsongen får en ikonisk serie en uppdaterad look. De här jackorna i begränsad upplaga kombinerar den pålitliga värmen och de praktiska funktionerna hos Expedition Down Lite Jacket med en ny design med grafiska färgblock.</p>
         <img 
         class="img-about" 
-        src="/assets/testimages/72e3bda9fa467fbaacea0b2added85a54afb2344.jpg"
+        src="/assets/testImages/72e3bda9fa467fbaacea0b2added85a54afb2344.jpg"
         alt="example"/>
 
     </section>
