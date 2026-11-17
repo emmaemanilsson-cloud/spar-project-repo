@@ -35,13 +35,12 @@ require_once __DIR__ . '/data.php';
                 <figure>
                     <img class="slide" src="" alt="">
                     <!-- paragraph instead?? -->
-                    <figcaption class="product-name">
-                        << /figcaption>
-                            <div class="price">
-                                <span class="product-price"></span>
-                                <!-- button for placing order (keep for now, until descision made)-->
-                                <button>Lägg i varukorg</button>
-                            </div>
+                    <figcaption class="product-name"></figcaption>
+                    <div class="price">
+                        <span class="product-price"></span>
+                        <!-- button for placing order (keep for now, until descision made)-->
+                        <button>Lägg i varukorg</button>
+                    </div>
                 </figure>
             </div>
         </div>
