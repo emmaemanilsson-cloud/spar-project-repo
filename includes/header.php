@@ -67,7 +67,7 @@
     <header class="site-header">
         <!-- TODO: input spar-logo -->
         <a href="index.php" class="logo-spar">
-            <img src="/assets/testImages/layout-placeholder.svg" alt="SPÅR">
+            <img src="/assets/test.png" alt="SPÅR">
         </a>
 
         <div class="desktop-only">

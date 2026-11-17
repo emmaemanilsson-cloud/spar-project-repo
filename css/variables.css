@@ -10,6 +10,14 @@
     --terracotta: #A65F3F;
     --charcoal:  #30332F;
 
+    /* latest colors from DD*/
+    --green: #1F4B3A;
+    --brown: #2B241E;
+    --text-color-dark: #2B241E;
+    --text-color-light: #F7F7F4;
+    --background-color: #FFF;
+
+
 
     /* Spacing - adjust to final design.*/
     /*Pixel equivalents assume a 16px root font size. */
