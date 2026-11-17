@@ -15,19 +15,19 @@ require_once __DIR__ . '/data.php';
     </section>
     <!-- About -->
     <section class="about-section">
-        <h2 class="about-heading">Om kollektionen</h2>
-        <p class="about-p">Den här säsongen får en ikonisk serie en uppdaterad look. De här jackorna i begränsad upplaga kombinerar den pålitliga värmen och de praktiska funktionerna hos Expedition Down Lite Jacket med en ny design med grafiska färgblock.</p>
-        <img 
-        class="img-about" 
-        src="/assets/testImages/72e3bda9fa467fbaacea0b2added85a54afb2344.jpg"
-        alt="example"/>
+        <h2 class="about-heading">Gjort för att följa med.</h2>
+        <p class="about-p">Redo för nästa äventyr? Upptäck vår senaste kollektion, skapad för ett liv närmare naturen. Genomtänkta detaljer, tidlös design och omtanke i varje val.</p>
+        <img
+            class="img-about"
+            src="/assets/khai-truong-TuT_ttpdEIM-unsplash 1 1.png"
+            alt="" />
 
     </section>
 
     <!-- placeholder carousel - remove later-->
 
     <section class="carousel-placeholder">
-        <h2>Upptäck vår senaste kollektion</h2>
+        <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
 
         <div class="placeholder-container">
             <div class="placeholder-box"></div>
@@ -41,21 +41,21 @@ require_once __DIR__ . '/data.php';
 
     <!-- i blickfånget -->
     <section class="viewer-section">
-        <h3 class="viewer-heading">I blickfånget</h3>
+        <h2 class="viewer-heading">Genomtänkt in i minsta detalj.</h2>
         <div class="viewer-box"></div>
         <!-- Placeholder for color selection below 3D-animation -->
         <span class="color-selector">&#x25C9 &#x25C9 &#x25C9</span> <!--html unicode in hex for geometric shape (fisheye)-->
+        <p class="viewer-p">En hyllning till det klassiska friluftslivet. Med inspiration från traditionella vandringsskor kombinerar den här modellen en tidlös silhuett med en robust karaktär. Skapad för att följa med på allt från skogspromenader till nya äventyr långt bortom stadens gator.</p>
     </section>
+
 
 
     <!-- newsletter -->
     <section class="newsletter-section" id="newsletter">
         <form>
             <!-- In wireframe heading newsletter is set to h1, use h2 instead? -->
-            <h2 class="newsletter-heading">Följ vår resa</h2>
-            <p class="newsletter-p">Prenumerera på vårt nyhetsbrev och få 10 % rabatt på din första beställning.
-                Samtidigt får du följa med på vår resa mot en mer hållbar framtid och ta
-                del av hur vi kontinuerligt utvecklar vårt hållbarhetsarbete.</p>
+            <h2 class="newsletter-heading">En mer hållbar väg framåt.</h2>
+            <p class="newsletter-p">Prenumerera på vårt nyhetsbrev och få 10 % rabatt på din första beställning! Som prenumerant följer du med på vår resa mot en mer hållbar framtid. Vi berättar löpande hur vi utvecklar vårt hållbarhetsarbete och vilka steg vi tar framåt.</p>
             <!--  -->
             <fieldset class="email-field">
                 <label for="email">Din e-postadress</label>
@@ -72,7 +72,11 @@ require_once __DIR__ . '/data.php';
 
     <!-- Insta-gallery -->
     <section class="insta-section">
-        <h2 class="instagallery-heading">Få inspiration varje dag @sparoutdoor</h2>
+        <h2 class="instagallery-heading">Era äventyr, vår inspiration</h2>
+        <div class="instagram-info">
+            <img src="assets/instagram.svg" alt="">
+            <span>sparoutdoor</span>
+        </div>
         <div class="instagrid-container">
             <div class="img-container">
                 <!-- loop through array to get each image (src and alt) -->

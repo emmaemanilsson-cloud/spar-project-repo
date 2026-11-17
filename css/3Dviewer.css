@@ -1,5 +1,5 @@
 .viewer-section {
-  height: 456px;
+  
   margin: var(--space-md); /*16px*/
   display: flex;
   flex-direction: column;
@@ -12,7 +12,6 @@
   margin-top: var(--space-md); /*16px*/
   font-weight: var(--font-weight-semibold); /*600*/
   font-size: var(--font-size-xl); /*32px*/
-  font-size: var(--font-size-xl); /*32px*/
 
   color: var(--charcoal);
 }
@@ -23,7 +22,6 @@
 }
 
 .color-selector {
-  height: var(--space-md);
   color: lightgray;
   font-size: var(
     --font-size-sm
@@ -32,10 +30,17 @@
   padding-block: var(--space-sm); /*8px*/
 }
 
+.viewer-p {
+    font-size: var(--font-size-sm); /*16px*/
+    line-height: 1.6;
+    text-wrap: balance;  
+    color: var(--text-color-dark);
+}
+
 /* desctop view */
 @media (min-width: 600px) {
   .viewer-section {
-    height: 790px;
+    
     margin-bottom: 64px;
     margin-top: var(--space-lg); /*32px*/
   }

@@ -5,7 +5,7 @@
 
 .accordion details {
     padding: 20px var(--space-md);
-    border-bottom: 1px solid var(--charcoal);
+    border-bottom: 1px solid var(--text-color-dark);
 
 }
 /* text folding out */
@@ -14,7 +14,7 @@
     font-size: var(--font-size-xs);
     padding: 5px 0;
     text-decoration: none;
-    color: var(--charcoal);
+    color: var(--text-color-dark);
 }
 
 /* general accordion styling */
@@ -30,7 +30,7 @@
     text-transform: uppercase;
     letter-spacing: 2px; 
 
-    color: var(--charcoal);
+    color: var(--text-color-dark);
 }
 
 
@@ -64,7 +64,7 @@
     letter-spacing: 2px;
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-medium);
-    color: var(--charcoal);
+    color: var(--text-color-dark);
 }
 
 /* paragraph newsletter */
@@ -72,7 +72,7 @@
     font-size: 18px;
     font-weight: 300;
 
-    color: var(--charcoal);
+    color: var(--text-color-dark);
 }
 /* newsletter form parent*/
 .newsletter-footer form {
@@ -94,8 +94,8 @@
 /* reg. button */
 .newsletter-footer button {
     text-transform: uppercase;
-    background-color: var(--charcoal);
-    color: var(--ivory);
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
     font-size: var(--font-size-xs);
     padding: 8px;
     border: none;
@@ -116,8 +116,8 @@
     gap: 20px;
     padding: 20px var(--space-md);
 
-    background-color: #3b3b3b;
-    color: var(--ivory);
+    background-color: #000; /* background color footer */
+    color: var(--text-color-light);
 
 }
 /* TODO: move cookie settings to left. Or mabye this is good enough??? */
