@@ -29,9 +29,11 @@ require_once __DIR__ . '/data.php';
     <section class="section-carousel">
         <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
 
-        <div class="carousel-view">
-            <div class="slide-container">
-                <!-- figure: container for images and info about each product -->
+        <div class="carousel-viewer">
+            <div class="slides-container">
+                <!-- implement loop through products-array in data.php -->
+                <!-- (consider: create functions, separate php-logic and html-structure more??) -->
+                <!-- figure: container for each product in slide-->
                 <figure>
                     <img class="slide" src="" alt="">
                     <!-- paragraph instead?? -->
@@ -48,6 +50,16 @@ require_once __DIR__ . '/data.php';
     </section>
 
 
+
+    <section class="carousel-placeholder">
+        <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
+
+        <div class="placeholder-container">
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+        </div>
+    </section>
 
 
     <!-- i blickfånget -->

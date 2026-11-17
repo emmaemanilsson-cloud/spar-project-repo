@@ -1,43 +1,41 @@
 /* temporary styling for carousel */
-
-.placeholder-container {
+/* changed to updated class-names ex: from .placeholder-container to carousel-viewer*/
+.carousel-viewer {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
   padding: var(--space-md);
 }
 
-.carousel-placeholder h2 {
+.section-carousel h2 {
   font-size: var(--font-size-xl);
   padding: var(--space-md);
   font-weight: var(--font-weight--semibold);
 }
 
-.placeholder-box {
-  aspect-ratio: 1 / 1;
-  background-color: #ccc;
-}
-
-.placeholder-box {
+/* container for product */
+figure {
   display: none;
   aspect-ratio: 1 / 1;
   background-color: #ccc;
 }
 
-.placeholder-box:first-child {
+figure:first-child {
   display: block;
 }
 
+/* desctop view */
 @media (min-width: 768px) {
-  .placeholder-container {
+  .carousel-viewer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .placeholder-box {
+  figure {
     display: block;
   }
 }
 
+/* tests carousel */
 .slide {
   width: 500px;
 }
