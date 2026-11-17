@@ -4,27 +4,27 @@
 
 $images = [
     [
-        'src' => "assets/testImages/insta.jpg",
+        'src' => "assets/testimages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "assets/testImages/insta.jpg",
+        'src' => "assets/testimages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "assets/testImages/insta.jpg",
+        'src' => "assets/testimages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "assets/testImages/insta.jpg",
+        'src' => "assets/testimages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "assets/testImages/insta.jpg",
+        'src' => "assets/testimages/insta.jpg",
         'alt' => "productimage"
     ],
     [
-        'src' => "assets/testImages/insta.jpg",
+        'src' => "assets/testimages/insta.jpg",
         'alt' => "productimage"
     ],
 
@@ -37,7 +37,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "insta.jpg",
+            'src' => "assets/testimages/insta.jpg",
             'alt' => "Shoe"
         ],
         'price' => 2999,
@@ -45,7 +45,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "insta.jpg",
+            'src' => "assets/testimages/insta.jpg",
             'alt' => "Shoe"
         ],
         'price' => 2999,
@@ -53,7 +53,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "insta.jpg",
+            'src' => "assets/testimages/insta.jpg",
             'alt' => "Shoe"
         ],
         'price' => 2999,
@@ -61,7 +61,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "insta.jpg",
+            'src' => "assets/testimages/insta.jpg",
             'alt' => "Shoe"
         ],
         'price' => 2999,
@@ -69,7 +69,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "insta.jpg",
+            'src' => "assets/testimages/insta.jpg",
             'alt' => "Shoe"
         ],
         'price' => 2999,
@@ -77,7 +77,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "insta.jpg",
+            'src' => "assets/testimages/insta.jpg",
             'alt' => "Shoe"
         ],
         'price' => 2999,
