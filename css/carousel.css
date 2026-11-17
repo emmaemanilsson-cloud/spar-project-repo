@@ -7,17 +7,28 @@
   padding: var(--space-md);
 }
 
-.section-carousel h2 {
-  font-size: var(--font-size-xl);
-  padding: var(--space-md);
-  font-weight: var(--font-weight--semibold);
+.placeholder-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
 }
 
-/* container for product */
-figure {
-  display: none;
-  aspect-ratio: 1 / 1;
-  background-color: #ccc;
+.carousel-placeholder {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+    gap: var(--space-md);
+    padding-top: var(--space-lg);
+}
+
+.carousel-heading {
+    font-size: var(--font-size-xl); /*32px*/
+    font-weight: var(--font-weight-semibold);
+    
+    padding: 0;
+    margin: 0;
+    
+    color: var(--text-color-dark);
 }
 
 /* figure:first-child {
