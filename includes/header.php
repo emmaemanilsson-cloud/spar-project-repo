@@ -17,29 +17,57 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..1000;1,100..1000&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/reset.css?id=<?= filemtime('css/reset.css'); ?>">
+    <link rel="stylesheet" href="css/variables.css?id=<?= filemtime('css/variables.css'); ?>">
+    <link rel="stylesheet" href="css/header.css?id=<?= filemtime('css/header.css'); ?>">
+    <link rel="stylesheet" href="css/hero.css?id=<?= filemtime('css/hero.css'); ?>">
+    <link rel="stylesheet" href="css/about.css?id=<?= filemtime('css/about.css'); ?>">
+    <link rel="stylesheet" href="css/carousel.css?id=<?= filemtime('css/carousel.css'); ?>">
+    <link rel="stylesheet" href="css/3Dviewer.css?id=<?= filemtime('css/3Dviewer.css'); ?>">
     <link rel="stylesheet" href="css/newsletter.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/instagallery.css?id=<?= filemtime('css/instagallery.css'); ?>">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/footer.css?id=<?= filemtime('css/footer.css'); ?>">
 
 </head>
 
 <body>
-    <!-- banner section. needs an id from newsletter-section in index.-->
-    <div class="marquee-bar">
+    <!-- banner section. 2 variants. change to eighter depending witch one we like-->
 
-        <a href="#">
-        </a>
+    <!-- <div class="banner-container banner-fade">-->
+   <div class="banner-container banner-scroll">
+        <div class="banner-slide">
+            <!-- duplicated bannergroups for sliding banner-->
+            <div class="banner-group">
+
+                <a href="#newsletter">
+                    <span>10% på ditt första köp</span>
+                    <span>30 dagars öppet köp</span>
+                    <span>Design for life outdoors</span>
+                </a>
+            </div>
+            <div class="banner-group" aria-hidden="true">
+
+                <a href="#newsletter" tabindex="-1">
+                    <span>10% på ditt första köp</span>
+                    <span>30 dagars öppet köp</span>
+                    <span>Design for life outdoors</span>
+                </a>
+            </div>
+            <div class="banner-group" aria-hidden="true">
+
+                <a href="#newsletter" tabindex="-1">
+                    <span>10% på ditt första köp</span>
+                    <span>30 dagars öppet köp</span>
+                    <span>Design for life outdoors</span>
+                </a>
+            </div>
+        </div>
     </div>
 
     <header class="site-header">
         <!-- TODO: input spar-logo -->
         <a href="index.php" class="logo-spar">
-            <img src="/assets/testImages/layout-placeholder.svg" alt="SPÅR">
+            <img src="/assets/test.png" alt="SPÅR">
         </a>
 
         <div class="desktop-only">
@@ -49,11 +77,11 @@
             <a href="#">Utrustning</a>
 
         </div>
-        
+
         <div class="header-icons">
 
-            <p>Sök</p>
-            <p>Varukorg (0)</p>
+            <a href="#">Sök</a>
+            <a href="#">Varukorg (0)</a>
 
 
             <button class="hamburger-menu" type="button" aria-label="">

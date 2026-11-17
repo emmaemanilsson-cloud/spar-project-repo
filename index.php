@@ -51,6 +51,8 @@ require_once __DIR__ . '/data.php';
     </section>
 
 
+
+
     <!-- i blickfånget -->
     <section class="viewer-section">
         <h2 class="viewer-heading">Genomtänkt in i minsta detalj.</h2>

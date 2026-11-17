@@ -10,8 +10,12 @@ body {
     width: 100%;
     min-height: 100dvh;
 
-    background-image: 
-        url("../assets/testImages/pexels-andreas-schnabl-1775843-19429867.jpg");
+    background-image:
+    linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+    ), 
+        url("../assets/michele-purin-uWJo5rEhvo4-unsplash\ 1.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +28,7 @@ body {
     text-align: center;
     padding: var(--space-md);
 
-    color: #fff;
+    color: var(--ivory);
 }
 
 @media (min-width: 768px) {

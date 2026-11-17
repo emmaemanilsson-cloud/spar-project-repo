@@ -1,0 +1,58 @@
+.viewer-section {
+  
+  margin: var(--space-md); /*16px*/
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md); /*16px*/
+}
+
+.viewer-heading {
+  padding: 0;
+  margin: 0;
+  margin-top: var(--space-md); /*16px*/
+  font-weight: var(--font-weight-semibold); /*600*/
+  font-size: var(--font-size-xl); /*32px*/
+
+  color: var(--charcoal);
+}
+
+.viewer-box {
+  background-color: lightgray;
+  height: 334px;
+}
+
+.color-selector {
+  color: lightgray;
+  font-size: var(
+    --font-size-sm
+  ); /*make the circles bigger to imitate design visually*/
+  text-align: center;
+  padding-block: var(--space-sm); /*8px*/
+}
+
+.viewer-p {
+    font-size: var(--font-size-sm); /*16px*/
+    line-height: 1.6;
+    text-wrap: balance;  
+    color: var(--text-color-dark);
+}
+
+/* desctop view */
+@media (min-width: 600px) {
+  .viewer-section {
+    
+    margin-bottom: 64px;
+    margin-top: var(--space-lg); /*32px*/
+  }
+
+  .viewer-box {
+    height: 667px;
+  }
+
+  .color-selector {
+    margin-top: var(--space-md); /*16px*/
+    font-size: var(
+      --font-size-xl
+    ); /*make the circles bigger to imitate design visually*/
+  }
+}
