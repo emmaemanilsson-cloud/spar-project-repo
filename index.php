@@ -21,10 +21,21 @@ require_once __DIR__ . '/data.php';
     <section class="carousel-placeholder">
         <h2>Upptäck vår senaste kollektion</h2>
 
-        <div class="placeholder-container">
-            <div class="placeholder-box"></div>
-            <div class="placeholder-box"></div>
-            <div class="placeholder-box"></div>
+        <div class="carousel-view">
+            <div class="slide-container">
+                <!-- figure: container for images and info about each product -->
+                <figure>
+                    <img class="slide" src="" alt="">
+                    <!-- paragraph instead?? -->
+                    <figcaption class="product-name">
+                        << /figcaption>
+                            <div class="price">
+                                <span class="product-price"></span>
+                                <!-- button for placing order (keep for now, until descision made)-->
+                                <button>Lägg i varukorg</button>
+                            </div>
+                </figure>
+            </div>
         </div>
     </section>
 
