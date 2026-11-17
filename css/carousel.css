@@ -1,12 +1,12 @@
 /* temporary styling for carousel */
 /* changed to updated class-names ex: from .placeholder-container to carousel-viewer*/
-/* .carousel-viewer {
+.carousel-viewer {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-md);
   padding: var(--space-md);
-} */
-/* 
+}
+
 .section-carousel h2 {
   font-size: var(--font-size-xl);
   padding: var(--space-md);
@@ -14,25 +14,26 @@
 }
 
 /* container for product */
-/* figure { */
-/* aspect-ratio: 1 / 1;
+figure {
+  display: none;
+  aspect-ratio: 1 / 1;
   background-color: #ccc;
-} */
+}
 
 /* figure:first-child {
   display: block;
 } */
 
 /* desctop view */
-/* @media (min-width: 768px) { */
-/* .carousel-viewer {
+@media (min-width: 768px) {
+  .carousel-viewer {
     grid-template-columns: repeat(3, 1fr);
-  } */
+  }
 
-/* figure {
+  figure {
     display: block;
   }
-} */
+}
 
 /* tests carousel */
 .slide {
@@ -48,7 +49,7 @@
   background-color: white;
 }
 
-.view {
+.carousel-viewer {
   width: fit-content;
   /* padding-block: 32px;
   background-color: rgb(32, 32, 108); */
@@ -62,9 +63,4 @@ figure {
   margin: 0;
   padding: 0;
   background-color: rgb(203, 226, 203);
-  width: fit-content;
-}
-
-figure img {
-  width: 500px;
 }
