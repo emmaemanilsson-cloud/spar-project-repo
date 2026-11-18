@@ -28,8 +28,9 @@ require_once __DIR__ . '/data.php';
 
     <section class="section-carousel">
         <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
-
+        <!-- "view window for slide-motion" -->
         <div class="carousel-viewer">
+            <!-- box that will be moving -->
             <div class="slides-container">
                 <!-- implement loop through products-array in data.php -->
                 <!-- (consider: create functions, separate php-logic and html-structure more??) -->
