@@ -83,3 +83,10 @@ $products = [
         'price' => 2999,
     ]
 ];
+
+?>
+
+<!-- Encode php-array to javascript-->
+<script>
+    const products = <?= json_encode($products) ?>;
+</script>

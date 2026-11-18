@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="css/newsletter.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/instagallery.css?id=<?= filemtime('css/instagallery.css'); ?>">
     <link rel="stylesheet" href="css/footer.css?id=<?= filemtime('css/footer.css'); ?>">
-    <script src="script.js defer"></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
