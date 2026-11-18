@@ -1,5 +1,11 @@
-
 /* temporary styling for carousel */
+/* changed to updated class-names ex: from .placeholder-container to carousel-viewer*/
+.carousel-viewer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
 
 .placeholder-container {
     display: grid;
@@ -25,28 +31,47 @@
     color: var(--text-color-dark);
 }
 
-.placeholder-box {
-    aspect-ratio: 1 / 1;
-    background-color: #ccc;
-    
-}
+/* figure:first-child {
+  display: block;
+} */
 
-.placeholder-box {
-    display: none;
-    aspect-ratio: 1 / 1;
-    background-color: #ccc;
-}
-
-.placeholder-box:first-child {
-    display: block;
-}
-
+/* desctop view */
 @media (min-width: 768px) {
-    .placeholder-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .placeholder-box {
-        display: block;
-    }
+  .carousel-viewer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure {
+    display: block;
+  }
+}
+
+/* tests carousel */
+.slide {
+  width: 500px;
+}
+
+.slides-container {
+  width: 650px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  background-color: white;
+}
+
+.carousel-viewer {
+  width: fit-content;
+  /* padding-block: 32px;
+  background-color: rgb(32, 32, 108); */
+  border-bottom: solid 3px rgb(69, 69, 120);
+  border-top: solid 3px rgb(21, 60, 5);
+  margin-left: 350px;
+  margin-top: 50px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(203, 226, 203);
 }

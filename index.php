@@ -26,13 +26,27 @@ require_once __DIR__ . '/data.php';
 
     <!-- placeholder carousel - remove later-->
 
-    <section class="carousel-placeholder">
+    <section class="section-carousel">
         <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
 
-        <div class="placeholder-container">
-            <div class="placeholder-box"></div>
-            <div class="placeholder-box"></div>
-            <div class="placeholder-box"></div>
+        <div class="carousel-viewer">
+            <div class="slides-container">
+                <!-- implement loop through products-array in data.php -->
+                <!-- (consider: create functions, separate php-logic and html-structure more??) -->
+                <!-- figure: container for each product in slide-->
+                <?php foreach ($products as $product): ?>
+                    <figure>
+                        <img class="slide" src="<?= $product['image']['src']; ?>" alt="<?= $product['image']['alt']; ?>">
+                        <!-- paragraph instead?? -->
+                        <figcaption class="product-name"><?= $product['name']; ?></figcaption>
+                        <div class="price">
+                            <span class="product-price"><?= $product['price'] . "kr"; ?></span>
+                            <!-- button for placing order (keep for now, until descision made)-->
+                            <button>Lägg i varukorg</button>
+                        </div>
+                    </figure>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
 
