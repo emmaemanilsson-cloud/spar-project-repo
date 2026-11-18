@@ -27,14 +27,14 @@
     <link rel="stylesheet" href="css/newsletter.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/instagallery.css?id=<?= filemtime('css/instagallery.css'); ?>">
     <link rel="stylesheet" href="css/footer.css?id=<?= filemtime('css/footer.css'); ?>">
-
+    <script src="script.js defer"></script>
 </head>
 
 <body>
     <!-- banner section. 2 variants. change to eighter depending witch one we like-->
 
     <!-- <div class="banner-container banner-fade">-->
-   <div class="banner-container banner-scroll">
+    <div class="banner-container banner-scroll">
         <div class="banner-slide">
             <!-- duplicated bannergroups for sliding banner-->
             <div class="banner-group">
