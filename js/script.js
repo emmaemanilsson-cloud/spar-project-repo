@@ -12,12 +12,13 @@ function getproductVar(productNum) {
   return "Could not find product-index";
 }
 
-
-
-
 // TODO: Continue here, read more about event handlers and event listeners and how to connect to css transform and transition styles
-window.addEventListener("click", function () {
-  const leftArrow = document.getElementsByClassName("left-arrow");
-  const slider = document.getElementsByClassName("slide-container");
-  }
-});
+// TEST change backgroundcolor on click
+const rightArrow = document.querySelector(".right-arrow");
+const slider = document.querySelector(".section-carousel");
+
+function changeBackgroundColor() {
+  slider.style.backgroundColor = "yellow";
+}
+
+rightArrow.addEventListener("click", changeBackgroundColor);
