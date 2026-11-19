@@ -61,7 +61,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "/assets/testImages/insta.jpg",
+            'src' => "/assets/testImages/carouselTestImg.png",
             'alt' => "Shoe"
         ],
         'price' => 2999,
@@ -77,7 +77,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "/assets/testImages/insta.jpg",
+            'src' => "/assets/testImages/carouselTestImg.png",
             'alt' => "Shoe"
         ],
         'price' => 2999,
