@@ -92,3 +92,12 @@ figcaption {
     width: 595px;
   }
 }
+
+/* test css for nav-arrows bottom of carousel */
+.arrow-nav-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 32px;
+  margin-top: 16px;
+}
