@@ -61,7 +61,7 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "/assets/testImages/insta.jpg",
+            'src' => "/assets/testImages/carouselTestImg.png",
             'alt' => "Shoe"
         ],
         'price' => 2999,
@@ -77,9 +77,16 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "/assets/testImages/insta.jpg",
+            'src' => "/assets/testImages/carouselTestImg.png",
             'alt' => "Shoe"
         ],
         'price' => 2999,
     ]
 ];
+
+?>
+
+<!-- Encode php-array to javascript-->
+<script>
+    const products = <?= json_encode($products) ?>;
+</script>
