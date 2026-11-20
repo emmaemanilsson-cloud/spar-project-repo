@@ -12,31 +12,43 @@ function getproductVar(productNum) {
 }
 console.log(products[0]);
 
+// carousel move with buttons, desctop view
 // declare variables for targeted elements/nodes
 const rightArrow = document.querySelector(".right-arrow");
 const leftArrow = document.querySelector(".left-arrow");
 const slider = document.querySelector(".slides-container");
 let slide = document.querySelector("figure");
 
-index = 1;
+index = 0;
 
-// movement right, desctop
-// TODO: how distinguish movement desctop from mobile? Do I add it to the same code-block, with more if-conditionals?
 function moveSliderRight() {
-  // declare the width of one slide/image
   let width = slide.offsetWidth + 16;
-  // transition-styles
-  slider.style.transitionDuration = ".6s";
-  slider.style.transitionTimingFunction = "ease-in-out";
-  // if-conditionals to count what index is active and width-change for each click
+
+  slider.style.transitionDuration = ".5s";
+  slider.style.transitionTimingFunction = "ease-out";
+
+  index++;
+
   if (index < products.length - 2) {
     slider.style.transform = "translateX(-" + width * index + "px)";
   } else if (index === products.length - 2) {
-    // TODO: calculate in detail how big portion of the half-hidden slide that will show and ultimately decide the value of the last transition. (How do I pin-point it dynamically?)
     slider.style.transform = "translateX(-" + width * (index - 0.3) + "px)";
   }
-
-  index++;
 }
 
 rightArrow.addEventListener("click", moveSliderRight);
+
+function moveSliderLeft() {
+  let width = slide.offsetWidth + 16;
+
+  slider.style.transitionDuration = ".5s";
+  slider.style.transitionTimingFunction = "ease-out";
+
+  index--;
+  if (index > 0) {
+    slider.style.transform = "translateX(-" + width * index + "px)";
+  } else {
+    slider.style.transform = "translateX(-" + width * 0 + "px)";
+  }
+}
+leftArrow.addEventListener("click", moveSliderLeft);

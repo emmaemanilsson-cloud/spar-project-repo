@@ -49,8 +49,8 @@ require_once __DIR__ . '/data.php';
             </div>
             <!-- add temporary buttons/ arrows for navigation in carousel -->
             <div class="arrow-nav-carousel">
-                <button class="left-arrow">&#x21E6</button>
-                <button class="right-arrow">&#x21E8</button>
+                <button class="arrow left-arrow">&#x21E6</button>
+                <button class="arrow right-arrow">&#x21E8</button>
             </div>
         </div>
     </section>
