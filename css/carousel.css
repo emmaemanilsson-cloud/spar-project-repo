@@ -20,6 +20,8 @@
   width: 100%;
   height: fit-content;
   overflow: hidden;
+  /* pan-y => browser handles vertical scroll */
+  touch-action: pan-y;
 }
 
 .slides-container {
