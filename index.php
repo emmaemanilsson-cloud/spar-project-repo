@@ -7,18 +7,19 @@ require_once __DIR__ . '/data.php';
 
     <!-- Hero section -->
     <section class="hero">
-        <h1>Skapad för <br>
-            elementen.<br>
+        <h1>Skapad för elementen.<br>
             Formad för dig.</h1>
 
     </section>
     <!-- About -->
     <section class="about-section">
+        <div class="about-text">
         <h2 class="about-heading">Gjort för att följa med.</h2>
-        <p class="about-p">Redo för nästa äventyr? Upptäck vår senaste kollektion, skapad för ett liv närmare naturen. Genomtänkta detaljer, tidlös design och omtanke i varje val.</p>
+        <p class="about-p">Upptäck vår senaste kollektion, skapad för ett liv närmare naturen. Plaggen följer med dig hela vägen, både uppför fjället och på promenaden i skogen. Materialen är slitstarka, funktionerna genomtänkta och passformen lika bekväm på stigen som i vardagen. Designen är tidlös och gjord för att hålla säsong efter säsong.</p>
+        </div>
         <img
             class="img-about"
-            src="/assets/khai-truong-TuT_ttpdEIM-unsplash 1 1.png"
+            src="/assets/pics/ad40c7378f6d96fbd17b58cb97a2c1c92aa5f097.jpg"
             alt="" />
 
     </section>
@@ -93,7 +94,7 @@ require_once __DIR__ . '/data.php';
     <section class="insta-section">
         <h2 class="instagallery-heading">Era äventyr, vår inspiration</h2>
         <div class="instagram-info">
-            <img src="assets/instagram.svg" alt="">
+            <img src="assets/logo/instagram.svg" alt="">
             <span>sparoutdoor</span>
         </div>
         <div class="instagrid-container">
