@@ -19,6 +19,7 @@ const leftArrow = document.querySelector(".left-arrow");
 const view = document.querySelector(".carousel-viewer");
 const slider = document.querySelector(".slides-container");
 const slide = document.querySelector("figure");
+const section = document.querySelector(".section-carousel");
 
 // declare variables for calculate and declare movement-ranges
 // index and position
@@ -55,6 +56,7 @@ function moveSliderRight() {
     index++;
     slider.style.transform = "translateX(-" + transportRange + "px";
     rightArrow.disabled = true;
+    // section.style.marginLeft = 0;
   }
 }
 // implement click to right-button
@@ -71,6 +73,8 @@ function moveSliderLeft() {
     position -= transportRange - slideStep * index;
     slider.style.transform = "translateX(-" + position + "px)";
     rightArrow.disabled = false;
+    // style section margin to change depending on where/which direction your moving in carousel?
+    // section.style.marginRight = 0;
     // if between start position and rightmost edge => move one slide-width to left
   } else if (
     position - slideStep > 0 &&
