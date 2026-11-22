@@ -1,7 +1,6 @@
 <footer class="footer-section">
-    <!-- test: remove name on details, otherwise all three accordion will not stay open ono desktop -->
     <div class="accordion">
-        <details name="footer-accordion1">
+        <details name="footer-accordion">
             <summary>Kundservice</summary>
             <a href="#">Frakt & leverans</a>
             <a href="#">Returer & byte</a>
@@ -10,7 +9,7 @@
             <a href="#">Kontakta oss</a>
         </details>
 
-        <details name="footer-accordion2">
+        <details name="footer-accordion">
             <summary>Om oss</summary>
             <a href="#">Vår historia</a>
             <a href="#">Hållbarhet & material</a>
@@ -18,7 +17,7 @@
             <a href="#">Butiker</a>
         </details>
 
-        <details name="footer-accordion3">
+        <details name="footer-accordion">
             <summary>Annat</summary>
             <a href="#">Köpvillkor</a>
             <a href="#">Integritetspolicy</a>
@@ -32,10 +31,10 @@
         <p>Prenumerera på vårt nyhetsbrev och få 10 % rabatt på din första beställning</p>
         <form>
             <!-- the label need to be hidden in css-->
-            <label for="footer-email" class="visually-hidden-footer">Din e-postadress</label>
-            <input type="email" name="email" id="footer-email" placeholder="Din e-postadress" required>
-            <button type="submit">Registrera dig</button>
-        </form>
+          <label for="footer-email" class="visually-hidden-footer">Din e-postadress</label>
+          <input type="email" name="email" id="footer-email" placeholder="Din e-postadress" required>
+          <button type="submit">Registrera dig</button>
+</form>
     </div>
 
     <div class="bottom-footer">

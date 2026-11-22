@@ -41,7 +41,7 @@ const numSlidesInView = widthView / slideStep;
 // movement right button
 function moveSliderRight() {
   // transition-styles
-  slider.style.transitionDuration = ".5s";
+  slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
   console.log("index:", index);
   console.log("position:", position);
@@ -83,7 +83,7 @@ function moveSliderLeft() {
   // if position at rightmost edge => return to previous position (which is less than i slides width)
   if (position === transportRange) {
     index--;
-    position -= transportRange - slideStep * index;
+    position -= slideStep;
     slider.style.transform = "translateX(-" + position + "px)";
     rightArrow.disabled = false;
     // style section margin to change depending on where/which direction your moving in carousel?
@@ -98,7 +98,7 @@ function moveSliderLeft() {
     index--;
     slider.style.transform = "translateX(-" + position + "px)";
     // if at startposition => reset index and position to 0
-  } else if (position - slideStep === 0) {
+  } else if (position - slideStep <= 0) {
     position = 0;
     index = 0;
     leftArrow.disabled = true;
