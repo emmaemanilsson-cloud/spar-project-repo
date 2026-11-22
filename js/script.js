@@ -16,39 +16,64 @@ console.log(products[0]);
 // declare variables for targeted elements/nodes
 const rightArrow = document.querySelector(".right-arrow");
 const leftArrow = document.querySelector(".left-arrow");
+const view = document.querySelector(".carousel-viewer");
 const slider = document.querySelector(".slides-container");
 let slide = document.querySelector("figure");
 
 index = 0;
 
-function moveSliderRight() {
-  let width = slide.offsetWidth + 16;
+let slideGap = 16;
+let widthSlide = slide.offsetWidth;
+let widthSlider =
+  widthSlide * products.length + (products.length - 1) * slideGap;
+let widthView = view.offsetWidth;
+let slideStep = widthSlide + slideGap;
+let position = 0;
 
+console.log(widthSlider / widthView);
+console.log((widthView + slideGap) / slideStep);
+
+let transportRange = widthSlider - widthView;
+let numSlidesInView = widthView / slideStep;
+
+function moveSliderRight() {
   slider.style.transitionDuration = ".5s";
   slider.style.transitionTimingFunction = "ease-out";
 
-  index++;
+  console.log("before right: " + index);
 
-  if (index < products.length - 2) {
-    slider.style.transform = "translateX(-" + width * index + "px)";
-  } else if (index === products.length - 2) {
-    slider.style.transform = "translateX(-" + width * (index - 0.3) + "px)";
+  if (position + slideStep < transportRange) {
+    leftArrow.disabled = false;
+    position += slideStep;
+    index++;
+    slider.style.transform = "translateX(-" + position + "px)";
+  } else if (position + slideStep > transportRange) {
+    slider.style.transform = "translateX(-" + transportRange + "px";
+    rightArrow.disabled = true;
   }
 }
-
 rightArrow.addEventListener("click", moveSliderRight);
 
+// TODO: make left movement dynamic
 function moveSliderLeft() {
-  let width = slide.offsetWidth + 16;
-
   slider.style.transitionDuration = ".5s";
   slider.style.transitionTimingFunction = "ease-out";
+  console.log("before right: " + index);
 
-  index--;
-  if (index > 0) {
-    slider.style.transform = "translateX(-" + width * index + "px)";
-  } else {
-    slider.style.transform = "translateX(-" + width * 0 + "px)";
+  if (position - slideStep < transportRange) {
+    rightArrow.disabled = false;
+    position -= slideStep;
+    index--;
+    slider.style.transform = "translateX(-" + position + "px)";
+  } else if (position - slideStep > 0) {
+    rightArrow.disabled = false;
+    position -= slideStep;
+    index--;
+    slider.style.transform = "translateX(-" + position + "px)";
+  } else if (position <= 0) {
+    leftArrow.disabled = true;
+    slider.style.transform = "translateX(-" + position + "px";
   }
 }
+
 leftArrow.addEventListener("click", moveSliderLeft);
