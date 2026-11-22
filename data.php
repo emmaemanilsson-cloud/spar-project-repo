@@ -37,50 +37,50 @@ $products = [
     [
         'name' => "Retro Hiker Shoe",
         'image' => [
-            'src' => "/assets/testImages/insta.jpg",
+            'src' => "/assets/products/render_sko_en.jpg",
             'alt' => "Shoe"
         ],
-        'price' => 2999,
+        'price' => 3499,
     ],
     [
-        'name' => "Retro Hiker Shoe",
+        'name' => "Retro Hiker Bag",
         'image' => [
-            'src' => "/assets/testImages/carouselTestImg.png",
+            'src' => "/assets/products/väskarender.jpg",
             'alt' => "Shoe"
         ],
-        'price' => 2999,
+        'price' => 1999,
     ],
     [
-        'name' => "Retro Hiker Shoe",
+        'name' => "Retro Hiker Bottle",
         'image' => [
-            'src' => "/assets/testImages/insta.jpg",
+            'src' => "/assets/products/vattenflaskarender.jpg",
             'alt' => "Shoe"
         ],
-        'price' => 2999,
+        'price' => 499,
     ],
     [
-        'name' => "Retro Hiker Shoe",
+        'name' => "Kräm",
         'image' => [
-            'src' => "/assets/testImages/carouselTestImg.png",
+            'src' => "/assets/products/hudvårdrender.jpg",
             'alt' => "Shoe"
         ],
-        'price' => 2999,
+        'price' => 249,
     ],
     [
-        'name' => "Retro Hiker Shoe",
+        'name' => "Mugg",
         'image' => [
-            'src' => "/assets/testImages/insta.jpg",
+            'src' => "/assets/products/mugg.jpg",
             'alt' => "Shoe"
         ],
-        'price' => 2999,
+        'price' => 599,
     ],
     [
-        'name' => "Retro Hiker Shoe",
+        'name' => "Tech-ring",
         'image' => [
-            'src' => "/assets/testImages/carouselTestImg.png",
+            'src' => "/assets/products/ring_klar.jpg",
             'alt' => "Shoe"
         ],
-        'price' => 2999,
+        'price' => 4999,
     ]
 ];
 

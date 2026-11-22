@@ -9,7 +9,7 @@
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
     ), 
-      url("/assets/jason-leem-50bzI1F6urA-unsplash\ 1.png");
+      url("/assets/pics/aec074cd9780cee35b8a66a2debe9061195b5866.jpg");
     /* width: 375px; */
     width: 100%; /*change back to fixed width when whe make desctop-view*/
   }
@@ -85,9 +85,17 @@
     font-weight: var(--font-weight-semibold);
     padding: var(--space-sm); /*8px*/
     width: 100%;
-    color: var(--text-color-light);
-    background-color: var(--text-color-dark);
+    color: var(--text-color-dark);
+    background-color: var(--text-color-light);
+
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
+
+  /*hover på knappen*/
+  .newsletter-button:hover {
+    background-color: #939391;
+    color: var(--text-color-dark);
+}
 
   /* media queries desctop view */
   @media (min-width: 600px) {
