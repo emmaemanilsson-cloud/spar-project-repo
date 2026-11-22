@@ -59,8 +59,9 @@ function moveSliderRight() {
     index++;
     slider.style.transform = "translateX(-" + position + "px)";
     // if a step would exceed max allowed transport-range => position at the rigthmost edge
-  } else if (position + slideStep > transportRange) {
+  } else if (position + slideStep >= transportRange) {
     position = transportRange;
+    index++;
     slider.style.transform = "translateX(-" + transportRange + "px)";
     rightArrow.disabled = true;
     return;
@@ -131,3 +132,24 @@ function handleTouchEnd(event) {
 
 view.addEventListener("touchstart", handleTouchStart);
 view.addEventListener("touchend", handleTouchEnd);
+
+// footer disable click - accordion
+
+const mediaQueryObject = window.matchMedia("(min-width: 768px)");
+const details = document.querySelectorAll("details");
+
+function match(event) {
+  details.forEach((detail) => {
+    if (event.matches) {
+      detail.removeAttribute("name");
+      detail.setAttribute("open", "");
+    } else {
+      detail.removeAttribute("open");
+      detail.setAttribute("name", "accordion-footer");
+    }
+  });
+  console.log(mediaQueryObject);
+}
+match(mediaQueryObject);
+
+mediaQueryObject.addEventListener("change", match);
