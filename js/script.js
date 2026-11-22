@@ -43,6 +43,14 @@ function moveSliderRight() {
   // transition-styles
   slider.style.transitionDuration = ".5s";
   slider.style.transitionTimingFunction = "ease-out";
+  console.log("index:", index);
+  console.log("position:", position);
+  console.log("transportRange:", transportRange);
+
+  if (position >= transportRange) {
+    rightArrow.disabled = true;
+    return;
+  }
 
   // check if below max allowed transport-range => moves one slide-width (+gap)
   if (position + slideStep < transportRange) {
@@ -53,9 +61,9 @@ function moveSliderRight() {
     // if a step would exceed max allowed transport-range => position at the rigthmost edge
   } else if (position + slideStep > transportRange) {
     position = transportRange;
-    index++;
-    slider.style.transform = "translateX(-" + transportRange + "px";
+    slider.style.transform = "translateX(-" + transportRange + "px)";
     rightArrow.disabled = true;
+    return;
     // section.style.marginLeft = 0;
   }
 }
@@ -66,6 +74,10 @@ rightArrow.addEventListener("click", moveSliderRight);
 function moveSliderLeft() {
   slider.style.transitionDuration = ".5s";
   slider.style.transitionTimingFunction = "ease-out";
+
+  console.log("index:", index);
+  console.log("position:", position);
+  console.log("transportRange:", transportRange);
 
   // if position at rightmost edge => return to previous position (which is less than i slides width)
   if (position === transportRange) {
@@ -89,9 +101,33 @@ function moveSliderLeft() {
     position = 0;
     index = 0;
     leftArrow.disabled = true;
-    slider.style.transform = "translateX(-" + position + "px";
+    slider.style.transform = "translateX(-" + position + "px)";
   }
 }
-
 // implement click to left-button
 leftArrow.addEventListener("click", moveSliderLeft);
+
+// Add touch-events (for mobile)
+let startTouch = 0;
+let endTouch = 0;
+
+function handleTouchStart(event) {
+  startTouch = event.touches[0].clientX;
+  console.log("start: " + startTouch);
+}
+
+function handleTouchEnd(event) {
+  endTouch = event.changedTouches[0].clientX;
+  let touchDistance = startTouch - endTouch;
+  console.log(touchDistance);
+  if (touchDistance > 50) {
+    moveSliderRight();
+  }
+  if (touchDistance < -50) {
+    moveSliderLeft();
+  }
+  console.log("end: " + endTouch);
+}
+
+view.addEventListener("touchstart", handleTouchStart);
+view.addEventListener("touchend", handleTouchEnd);
