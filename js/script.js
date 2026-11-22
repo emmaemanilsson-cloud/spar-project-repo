@@ -18,62 +18,76 @@ const rightArrow = document.querySelector(".right-arrow");
 const leftArrow = document.querySelector(".left-arrow");
 const view = document.querySelector(".carousel-viewer");
 const slider = document.querySelector(".slides-container");
-let slide = document.querySelector("figure");
+const slide = document.querySelector("figure");
 
-index = 0;
-
-let slideGap = 16;
-let widthSlide = slide.offsetWidth;
-let widthSlider =
-  widthSlide * products.length + (products.length - 1) * slideGap;
-let widthView = view.offsetWidth;
-let slideStep = widthSlide + slideGap;
+// declare variables for calculate and declare movement-ranges
+// index and position
+let index = 0;
 let position = 0;
 
-console.log(widthSlider / widthView);
-console.log((widthView + slideGap) / slideStep);
+// widths and ranges
+const slideGap = 16;
+const widthSlide = slide.offsetWidth;
+const widthSlider =
+  widthSlide * products.length + (products.length - 1) * slideGap;
+const widthView = view.offsetWidth;
+const slideStep = widthSlide + slideGap;
+const transportRange = widthSlider - widthView;
 
-let transportRange = widthSlider - widthView;
-let numSlidesInView = widthView / slideStep;
+// number of slides in view
+const numSlidesInView = widthView / slideStep;
 
+// movement right button
 function moveSliderRight() {
+  // transition-styles
   slider.style.transitionDuration = ".5s";
   slider.style.transitionTimingFunction = "ease-out";
 
-  console.log("before right: " + index);
-
+  // check if below max allowed transport-range => moves one slide-width (+gap)
   if (position + slideStep < transportRange) {
     leftArrow.disabled = false;
     position += slideStep;
     index++;
     slider.style.transform = "translateX(-" + position + "px)";
+    // if a step would exceed max allowed transport-range => position at the rigthmost edge
   } else if (position + slideStep > transportRange) {
+    position = transportRange;
+    index++;
     slider.style.transform = "translateX(-" + transportRange + "px";
     rightArrow.disabled = true;
   }
 }
+// implement click to right-button
 rightArrow.addEventListener("click", moveSliderRight);
 
-// TODO: make left movement dynamic
+// movement left button
 function moveSliderLeft() {
   slider.style.transitionDuration = ".5s";
   slider.style.transitionTimingFunction = "ease-out";
-  console.log("before right: " + index);
 
-  if (position - slideStep < transportRange) {
+  // if position at rightmost edge => return to previous position (which is less than i slides width)
+  if (position === transportRange) {
+    index--;
+    position -= transportRange - slideStep * index;
+    slider.style.transform = "translateX(-" + position + "px)";
+    rightArrow.disabled = false;
+    // if between start position and rightmost edge => move one slide-width to left
+  } else if (
+    position - slideStep > 0 &&
+    position - slideStep < transportRange
+  ) {
     rightArrow.disabled = false;
     position -= slideStep;
     index--;
     slider.style.transform = "translateX(-" + position + "px)";
-  } else if (position - slideStep > 0) {
-    rightArrow.disabled = false;
-    position -= slideStep;
-    index--;
-    slider.style.transform = "translateX(-" + position + "px)";
-  } else if (position <= 0) {
+    // if at startposition => reset index and position to 0
+  } else if (position - slideStep === 0) {
+    position = 0;
+    index = 0;
     leftArrow.disabled = true;
     slider.style.transform = "translateX(-" + position + "px";
   }
 }
 
+// implement click to left-button
 leftArrow.addEventListener("click", moveSliderLeft);
