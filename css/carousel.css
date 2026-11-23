@@ -6,6 +6,13 @@
   margin-bottom: var(--space-md);
 }
 
+.carousel-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .carousel-heading {
   font-size: var(--font-size-xl); /*32px*/
   font-weight: var(--font-weight-semibold);
@@ -14,6 +21,25 @@
   margin: 0;
 
   color: var(--text-color-dark);
+}
+
+.arrow-nav-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 32px;
+  font-size: 32px;
+  margin-top: 16px;
+}
+
+.arrow {
+  /* remove default, button */
+  border: none;
+  background-color: var(--background-color);
+}
+
+.arrow img {
+  width: 32px;
 }
 
 .carousel-viewer {
@@ -28,26 +54,6 @@
   display: flex;
   flex-direction: row;
   gap: var(--space-md);
-  /* animation test to visualize movement */
-  /* animation: move 1s ease-in-out; */
-}
-
-/* transition tests with hover to visualize the movement*/
-/* .slides-container:hover {
-  transition-property: all;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-  transform: translateX(-606px);
-} */
-
-/* test */
-@keyframes move {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(-56px);
-  }
 }
 
 figure {
@@ -98,13 +104,4 @@ figcaption {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
   }
-}
-
-/* test css for nav-arrows bottom of carousel */
-.arrow-nav-carousel {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 32px;
-  margin-top: 16px;
 }
