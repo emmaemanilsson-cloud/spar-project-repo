@@ -72,7 +72,7 @@ rightArrow.addEventListener("click", moveSliderRight);
 
 // movement left button
 function moveSliderLeft() {
-  slider.style.transitionDuration = ".5s";
+  slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
 
   console.log("index:", index);
@@ -109,9 +109,11 @@ function moveSliderLeft() {
   }
 }
 
+// Add opacity when carousel is in startposition
 if (position === 0) {
   leftArrow.style.opacity = "0.5";
 }
+
 // implement click to left-button
 leftArrow.addEventListener("click", moveSliderLeft);
 
@@ -155,7 +157,6 @@ function match(event) {
       detail.setAttribute("name", "accordion-footer");
     }
   });
-  console.log(mediaQueryObject);
 }
 match(mediaQueryObject);
 
