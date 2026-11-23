@@ -3,7 +3,8 @@
     flex-direction: column;
     padding: var(--space-md);
     gap: var(--space-md);
-    padding-top: var(--space-lg);
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .about-text {
@@ -27,7 +28,7 @@
 .about-p {
     font-size: var(--font-size-sm); /*16px*/
     line-height: 1.6;
-    text-wrap: balance;  
+     
     color: var(--text-color-dark);
 }
 
@@ -44,6 +45,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
+    }
+
+    .about-heading {
+        font-size: var(--font-size-4xl);
+        font-weight: var(--font-weight-bold);
     }
 }
 

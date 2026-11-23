@@ -99,4 +99,9 @@ figcaption {
   figure {
     width: 595px;
   }
+
+  .carousel-heading {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+  }
 }

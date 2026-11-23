@@ -135,6 +135,9 @@ body {
     background-color: var(--background-color);
 }
 
+.logo-spar {
+    padding-top: 10px;
+}
 
 .logo-spar img {
     width: 50px;
@@ -191,6 +194,7 @@ body {
     }
 
     .logo-spar {
+        padding: 12px 0px 0px 12px;
         justify-self: start;
     }
 
