@@ -30,8 +30,8 @@ require_once __DIR__ . '/data.php';
         <div class="carousel-header">
             <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
             <div class="arrow-nav-carousel">
-                <button class="arrow left-arrow">&#x21E6</button>
-                <button class="arrow right-arrow">&#x21E8</button>
+                <button class="arrow left-arrow"><img src="/assets/symbols/arrow-left.svg" alt="Left arrow button" /></button>
+                <button class="arrow right-arrow"><img src="/assets/symbols/arrow-right.svg" alt="Right arrow button" /> </button>
             </div>
         </div>
         <!-- "view window for slide-motion" -->
