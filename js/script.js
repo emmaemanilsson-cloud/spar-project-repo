@@ -43,9 +43,6 @@ function moveSliderRight() {
   // transition-styles
   slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
-  console.log("index:", index);
-  console.log("position:", position);
-  console.log("transportRange:", transportRange);
 
   if (position >= transportRange) {
     rightArrow.disabled = true;
@@ -54,6 +51,7 @@ function moveSliderRight() {
 
   // check if below max allowed transport-range => moves one slide-width (+gap)
   if (position + slideStep < transportRange) {
+    leftArrow.style.opacity = "1";
     leftArrow.disabled = false;
     position += slideStep;
     index++;
@@ -64,6 +62,7 @@ function moveSliderRight() {
     index++;
     slider.style.transform = "translateX(-" + transportRange + "px)";
     rightArrow.disabled = true;
+    rightArrow.style.opacity = "0.5";
     return;
     // section.style.marginLeft = 0;
   }
@@ -73,7 +72,7 @@ rightArrow.addEventListener("click", moveSliderRight);
 
 // movement left button
 function moveSliderLeft() {
-  slider.style.transitionDuration = ".5s";
+  slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
 
   console.log("index:", index);
@@ -85,6 +84,7 @@ function moveSliderLeft() {
     index--;
     position -= slideStep;
     slider.style.transform = "translateX(-" + position + "px)";
+    rightArrow.style.opacity = "1";
     rightArrow.disabled = false;
     // style section margin to change depending on where/which direction your moving in carousel?
     // section.style.marginRight = 0;
@@ -96,15 +96,24 @@ function moveSliderLeft() {
     rightArrow.disabled = false;
     position -= slideStep;
     index--;
+    rightArrow.style.opacity = 1;
     slider.style.transform = "translateX(-" + position + "px)";
     // if at startposition => reset index and position to 0
   } else if (position - slideStep <= 0) {
     position = 0;
     index = 0;
+    leftArrow.style.opacity = "0.5";
     leftArrow.disabled = true;
+    // add style to apply disabled-effect
     slider.style.transform = "translateX(-" + position + "px)";
   }
 }
+
+// Add opacity when carousel is in startposition
+if (position === 0) {
+  leftArrow.style.opacity = "0.5";
+}
+
 // implement click to left-button
 leftArrow.addEventListener("click", moveSliderLeft);
 
@@ -148,7 +157,6 @@ function match(event) {
       detail.setAttribute("name", "accordion-footer");
     }
   });
-  console.log(mediaQueryObject);
 }
 match(mediaQueryObject);
 

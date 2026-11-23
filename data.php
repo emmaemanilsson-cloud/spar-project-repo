@@ -81,6 +81,22 @@ $products = [
             'alt' => "Shoe"
         ],
         'price' => 4999,
+    ],
+    [
+        'name' => "Shoe Green",
+        'image' => [
+            'src' => "/assets/products/sko_grön.jpg",
+            'alt' => "Shoe green"
+        ],
+        'price' => 599,
+    ],
+    [
+        'name' => "Shoe Red",
+        'image' => [
+            'src' => "/assets/products/sko_röd.jpg",
+            'alt' => "Shoe red"
+        ],
+        'price' => 599,
     ]
 ];
 
