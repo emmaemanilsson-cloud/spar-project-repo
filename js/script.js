@@ -111,25 +111,31 @@ leftArrow.addEventListener("click", moveSliderLeft);
 // Add touch-events (for mobile)
 let startTouch = 0;
 let endTouch = 0;
+let touchDistance = 0;
 
+// touch-start event
 function handleTouchStart(event) {
   startTouch = event.touches[0].clientX;
   console.log("start: " + startTouch);
 }
 
+// touch-end event
 function handleTouchEnd(event) {
   endTouch = event.changedTouches[0].clientX;
-  let touchDistance = startTouch - endTouch;
+  touchDistance = startTouch - endTouch;
   console.log(touchDistance);
+  // if distance between touch-start and touch-end exceeds 50px => trigger eventhandler (moveSliderRight)
   if (touchDistance > 50) {
     moveSliderRight();
   }
+  // if distance between touch-start and touch-end is less than -50px => trigger eventhandler (moveSliderLeft)
   if (touchDistance < -50) {
     moveSliderLeft();
   }
   console.log("end: " + endTouch);
 }
 
+// Add eventlistener to element with html class = 'view'
 view.addEventListener("touchstart", handleTouchStart);
 view.addEventListener("touchend", handleTouchEnd);
 
@@ -153,3 +159,5 @@ function match(event) {
 match(mediaQueryObject);
 
 mediaQueryObject.addEventListener("change", match);
+
+// TODO: add wheel-event

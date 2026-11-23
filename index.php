@@ -29,11 +29,7 @@ require_once __DIR__ . '/data.php';
     <section class="section-carousel">
         <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
         <!-- "view window for slide-motion" -->
-        <button class="arrow left-arrow">&#x21E6</button>
         <div class="carousel-viewer">
-            <!-- add temporary buttons/ arrows for navigation in carousel -->
-            <!-- <div class="arrow-nav-carousel">
-                </div> -->
             <!-- box that will be moving -->
             <div class="slides-container">
                 <!-- implement loop through products-array in data.php -->
@@ -52,7 +48,11 @@ require_once __DIR__ . '/data.php';
                     </figure>
                 <?php endforeach; ?>
             </div>
-            <button class="arrow right-arrow">&#x21E8</button>
+            <!-- add temporary buttons/ arrows for navigation in carousel -->
+            <div class="arrow-nav-carousel">
+                <button class="arrow left-arrow">&#x21E6</button>
+                <button class="arrow right-arrow">&#x21E8</button>
+            </div>
         </div>
     </section>
 

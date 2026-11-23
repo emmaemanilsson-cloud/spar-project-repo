@@ -22,7 +22,6 @@
   overflow: hidden;
   /* pan-y => browser handles vertical scroll */
   touch-action: pan-y;
-  position: relative;
 }
 
 .slides-container {
@@ -77,28 +76,10 @@ figcaption {
 }
 
 /* test css for nav-arrows bottom of carousel */
-.arrow {
+.arrow-nav-carousel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 32px;
-  background-color: red;
-  position: absolute;
-  /* margin-top: 16px; */
-}
-
-.right-arrow {
-  right: 0;
-}
-
-.left-arrow {
-  left: 0;
-}
-
-.section-carousel {
-  position: relative;
-}
-
-.carousel-viewer {
-  position: relative;
+  margin-top: 16px;
 }
