@@ -5,6 +5,12 @@
   margin-inline: var(--space-md);
   margin-bottom: var(--space-md);
 }
+.carousel-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .carousel-heading {
   font-size: var(--font-size-xl); /*32px*/
@@ -14,6 +20,16 @@
   margin: 0;
 
   color: var(--text-color-dark);
+}
+
+/* test css for nav-arrows bottom of carousel */
+.arrow-nav-carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 32px;
+  margin-top: 16px;
+  width: 100px;
 }
 
 .carousel-viewer {
@@ -73,13 +89,4 @@ figcaption {
   figure {
     width: 595px;
   }
-}
-
-/* test css for nav-arrows bottom of carousel */
-.arrow-nav-carousel {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 32px;
-  margin-top: 16px;
 }

@@ -27,13 +27,18 @@ require_once __DIR__ . '/data.php';
     <!-- placeholder carousel - remove later-->
 
     <section class="section-carousel">
-        <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
+        <div class="carousel-header">
+            <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
+            <div class="arrow-nav-carousel">
+                <button class="arrow left-arrow">&#x21E6</button>
+                <button class="arrow right-arrow">&#x21E8</button>
+            </div>
+        </div>
         <!-- "view window for slide-motion" -->
         <div class="carousel-viewer">
             <!-- box that will be moving -->
             <div class="slides-container">
                 <!-- implement loop through products-array in data.php -->
-                <!-- (consider: create functions, separate php-logic and html-structure more??) -->
                 <!-- figure: container for each product in slide-->
                 <?php foreach ($products as $product): ?>
                     <figure>
@@ -47,11 +52,6 @@ require_once __DIR__ . '/data.php';
                         </div>
                     </figure>
                 <?php endforeach; ?>
-            </div>
-            <!-- add temporary buttons/ arrows for navigation in carousel -->
-            <div class="arrow-nav-carousel">
-                <button class="arrow left-arrow">&#x21E6</button>
-                <button class="arrow right-arrow">&#x21E8</button>
             </div>
         </div>
     </section>
