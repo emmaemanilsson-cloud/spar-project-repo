@@ -4,7 +4,7 @@
 
 $images = [
     [
-        'src' => "/assets/testImages/insta.jpg",
+        'src' => "/assets/instagallery/SoMe.jpg",
         'alt' => "productimage"
     ],
     [

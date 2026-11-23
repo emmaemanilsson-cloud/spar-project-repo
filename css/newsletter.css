@@ -4,12 +4,17 @@
     align-items: center;
     min-height: 488px;
     padding-inline: var(--space-sm); /*8px*/
+    
     background-image: 
       linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
     ), 
       url("/assets/pics/aec074cd9780cee35b8a66a2debe9061195b5866.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     /* width: 375px; */
     width: 100%; /*change back to fixed width when whe make desctop-view*/
   }
@@ -105,7 +110,6 @@
     }
 
     .newsletter-section form {
-      margin-block: 365px;
       width: 100%;
       max-width: 800px;
     }
@@ -113,11 +117,14 @@
     .newsletter-heading {
       font-size: var(--font-size-5xl); /*64px*/
       font-weight: var(--font-weight-bold); /*700*/
+      white-space: nowrap;
     }
 
     .newsletter-p {
       font-size: var(--font-size-md); /*16px*/
       font-weight: var(--font-weight-regular); /*400*/
+      margin-bottom: 32px;
+      text-wrap: balance;
     }
 
     .email-field {
