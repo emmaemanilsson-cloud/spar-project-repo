@@ -143,7 +143,8 @@ view.addEventListener("touchstart", handleTouchStart);
 view.addEventListener("touchend", handleTouchEnd);
 
 // footer disable click - accordion
-
+//  + make javascript run again when passing breaking point between mobile and desktop view
+// (otherwise the carousel calculations would not transfer correctly if you resized window without loading the page)
 const mediaQueryObject = window.matchMedia("(min-width: 768px)");
 const details = document.querySelectorAll("details");
 
@@ -157,7 +158,14 @@ function match(event) {
       detail.setAttribute("name", "accordion-footer");
     }
   });
+  // listen for windowsize
+  if (event.matches) {
+    console.log("desktop view activated");
+  } else {
+    console.log("mobile view activated");
+  }
 }
+
 match(mediaQueryObject);
 
 mediaQueryObject.addEventListener("change", match);
