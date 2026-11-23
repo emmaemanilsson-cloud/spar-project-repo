@@ -14,8 +14,8 @@ require_once __DIR__ . '/data.php';
     <!-- About -->
     <section class="about-section">
         <div class="about-text">
-        <h2 class="about-heading">Gjort för att följa med.</h2>
-        <p class="about-p">Upptäck vår senaste kollektion, skapad för ett liv närmare naturen. Plaggen följer med dig hela vägen, både uppför fjället och på promenaden i skogen. Materialen är slitstarka, funktionerna genomtänkta och passformen lika bekväm på stigen som i vardagen. Designen är tidlös och gjord för att hålla säsong efter säsong.</p>
+            <h2 class="about-heading">Gjort för att följa med.</h2>
+            <p class="about-p">Upptäck vår senaste kollektion, skapad för ett liv närmare naturen. Plaggen följer med dig hela vägen, både uppför fjället och på promenaden i skogen. Materialen är slitstarka, funktionerna genomtänkta och passformen lika bekväm på stigen som i vardagen. Designen är tidlös och gjord för att hålla säsong efter säsong.</p>
         </div>
         <img
             class="img-about"
@@ -29,7 +29,11 @@ require_once __DIR__ . '/data.php';
     <section class="section-carousel">
         <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
         <!-- "view window for slide-motion" -->
+        <button class="arrow left-arrow">&#x21E6</button>
         <div class="carousel-viewer">
+            <!-- add temporary buttons/ arrows for navigation in carousel -->
+            <!-- <div class="arrow-nav-carousel">
+                </div> -->
             <!-- box that will be moving -->
             <div class="slides-container">
                 <!-- implement loop through products-array in data.php -->
@@ -48,11 +52,7 @@ require_once __DIR__ . '/data.php';
                     </figure>
                 <?php endforeach; ?>
             </div>
-            <!-- add temporary buttons/ arrows for navigation in carousel -->
-            <div class="arrow-nav-carousel">
-                <button class="arrow left-arrow">&#x21E6</button>
-                <button class="arrow right-arrow">&#x21E8</button>
-            </div>
+            <button class="arrow right-arrow">&#x21E8</button>
         </div>
     </section>
 
