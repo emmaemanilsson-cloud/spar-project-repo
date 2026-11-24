@@ -68,7 +68,7 @@ require_once __DIR__ . '/data.php';
     <section class="viewer-section">
         <h2 class="viewer-heading">Genomtänkt in i minsta detalj.</h2>
         <div class="viewer-box">
-            <video class="viewer-video" autoplay muted loop playsinline controls>
+            <video class="viewer-video" autoplay muted loop playsinline>
                 <source src="/assets/turntable/turntable_sko.mp4" type="video/mp4">
             </video>
         </div>
