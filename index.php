@@ -20,14 +20,14 @@ require_once __DIR__ . '/data.php';
         <img
             class="img-about"
             src="/assets/pics/ad40c7378f6d96fbd17b58cb97a2c1c92aa5f097.jpg"
-            alt="friluftsman i dimma"/>
+            alt="friluftsman i dimma" />
 
     </section>
 
     <!-- placeholder carousel - remove later-->
 
     <section class="section-carousel">
-        
+
         <div class="carousel-header">
             <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
             <div class="arrow-nav-carousel">
