@@ -63,7 +63,9 @@ figure {
   flex-direction: column;
   flex-shrink: 0;
   gap: var(--space-md);
-  width: 279px;
+  max-width: 279px;
+  width: 100%;
+  height: auto;
 }
 
 .slide {
@@ -97,6 +99,8 @@ figcaption {
   }
 
   figure {
-    width: 595px;
+    max-width: 595px;
+    width: 100%;
+    height: auto;
   }
 }
