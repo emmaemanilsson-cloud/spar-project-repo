@@ -14,7 +14,7 @@
 }
 
 .carousel-heading {
-  font-size: var(--font-size-xl); /*32px*/
+  font-size: var(--font-size-2xl); /*36px*/
   font-weight: var(--font-weight-semibold);
 
   padding: 0;
@@ -101,7 +101,7 @@ figcaption {
   }
 
   .carousel-heading {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-2xl); /*36px*/
     font-weight: var(--font-weight-bold);
   }
 }

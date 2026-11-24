@@ -4,7 +4,7 @@
     align-items: center;
     min-height: 488px;
     padding-inline: var(--space-sm); /*8px*/
-    
+
     background-image: 
       linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -68,7 +68,7 @@
     width: 100%;
     min-width: 0;
     align-self: stretch;
-    padding-bottom: var(--space-sm); /*8px*/
+    
   }
 
   /* label ev. add class if we want it to differ from eventual label in footer? */
@@ -80,6 +80,10 @@
   #email {
     width: 100%;
     padding: 6px;
+    border-radius: 0;
+    appearance: none;
+    box-shadow: none;
+    border: none;
   }
 
   /* submit button */
@@ -92,6 +96,9 @@
     width: 100%;
     color: var(--text-color-dark);
     background-color: var(--text-color-light);
+
+    border-radius: 0;
+    appearance: none;
 
     transition: background-color 0.3s ease, color 0.3s ease;
   }
@@ -121,10 +128,11 @@
     }
 
     .newsletter-p {
-      font-size: var(--font-size-md); /*16px*/
+      font-size: var(--font-size-sm); /*16px*/
       font-weight: var(--font-weight-regular); /*400*/
       margin-bottom: 32px;
-      text-wrap: balance;
+    
+      max-width: 555px;
     }
 
     .email-field {
