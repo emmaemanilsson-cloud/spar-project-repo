@@ -4,28 +4,34 @@
 
 $images = [
     [
-        'src' => "/assets/instagallery/SoME.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/pictures/SoME.jpg",
+        'alt' => "SoMepicture",
+        'type' => "image",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/videos/spar_brand_vid.mp4",
+        'alt' => "SoMevideo",
+        'type' => "video",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/pictures/SoMe_Bild_Deskstop.jpg",
+        'alt' => "SoMepicture",
+        'type' => "image",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/videos/Instagram-story.mp4",
+        'alt' => "SoMevideo",
+        'type' => "video",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/pictures/SoMe_bild.png",
+        'alt' => "SoMepicture",
+        'type' => "image",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/videos/somevideo.mp4",
+        'alt' => "SoMevideo",
+        'type' => "video"
     ],
 
 ];

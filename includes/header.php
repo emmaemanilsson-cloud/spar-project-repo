@@ -65,9 +65,16 @@
     </div>
 
     <header class="site-header">
-        <!-- TODO: input spar-logo -->
         <a href="index.php" class="logo-spar">
-            <img src="/assets/logo/logo_black.png" alt="SPÅR">
+            <picture>
+                <source
+                    media="(min-width: 768px)"
+                    srcset="/assets/logo/logo_desktop.png">
+
+                <img
+                    src="/assets/logo/logo_mobile.png"
+                    alt="SPÅR">
+            </picture>
         </a>
 
         <div class="desktop-only">
@@ -79,9 +86,12 @@
         </div>
 
         <div class="header-icons">
-
-            <a href="#">Sök</a>
-            <a href="#">Varukorg (0)</a>
+            <div class="search-group">
+                <img class="search-icon"
+                    src="/assets/symbols/search.svg"
+                    alt="">
+                <span>Sök</span>
+            </div>
 
 
             <button class="hamburger-menu" type="button" aria-label="">
