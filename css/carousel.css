@@ -38,6 +38,11 @@
   background-color: var(--background-color);
 }
 
+/* Hover effect on buttons? (ask DD) */
+/* .arrow:hover {
+  box-shadow: 1px 1px 4px var(--green);
+} */
+
 .arrow img {
   width: 32px;
 }
@@ -90,7 +95,7 @@ figcaption {
   font-weight: var(--font-weight-medium); /*500*/
 }
 
-/* desctop view */
+/* desktop view */
 @media (min-width: 768px) {
   .section-carousel {
     padding-block: var(--space-md); /*16px*/
@@ -103,5 +108,14 @@ figcaption {
   .carousel-heading {
     font-size: var(--font-size-4xl);
     font-weight: var(--font-weight-bold);
+  }
+}
+
+/* TODO! No arrows on mobile view?? */
+
+/* mobile view */
+@media (max-width: 768px) {
+  .arrow {
+    visibility: hidden;
   }
 }
