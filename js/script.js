@@ -28,7 +28,7 @@ let position = 0;
 
 // widths and ranges
 const slideGap = 16;
-const widthSlide = slide.offsetWidth;
+let widthSlide = slide.offsetWidth;
 const widthSlider =
   widthSlide * products.length + (products.length - 1) * slideGap;
 const widthView = view.offsetWidth;
@@ -43,7 +43,10 @@ function moveSliderRight() {
   // transition-styles
   slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
+  // update slide-width
+  widthSlide = slide.offsetWidth;
 
+  // if at rightmost edge
   if (position >= transportRange) {
     rightArrow.disabled = true;
     return;
@@ -51,16 +54,18 @@ function moveSliderRight() {
 
   // check if below max allowed transport-range => moves one slide-width (+gap)
   if (position + slideStep < transportRange) {
-    leftArrow.style.opacity = "1";
-    leftArrow.disabled = false;
     position += slideStep;
     index++;
     slider.style.transform = "translateX(-" + position + "px)";
+
+    leftArrow.style.opacity = "1";
+    leftArrow.disabled = false;
     // if a step would exceed max allowed transport-range => position at the rigthmost edge
   } else if (position + slideStep >= transportRange) {
     position = transportRange;
     index++;
     slider.style.transform = "translateX(-" + transportRange + "px)";
+
     rightArrow.disabled = true;
     rightArrow.style.opacity = "0.5";
     return;
@@ -74,16 +79,14 @@ rightArrow.addEventListener("click", moveSliderRight);
 function moveSliderLeft() {
   slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
-
-  console.log("index:", index);
-  console.log("position:", position);
-  console.log("transportRange:", transportRange);
+  widthSlide = slide.offsetWidth;
 
   // if position at rightmost edge => return to previous position (which is less than i slides width)
   if (position === transportRange) {
     index--;
     position -= slideStep;
     slider.style.transform = "translateX(-" + position + "px)";
+
     rightArrow.style.opacity = "1";
     rightArrow.disabled = false;
     // style section margin to change depending on where/which direction your moving in carousel?
@@ -93,19 +96,21 @@ function moveSliderLeft() {
     position - slideStep > 0 &&
     position - slideStep < transportRange
   ) {
-    rightArrow.disabled = false;
     position -= slideStep;
     index--;
-    rightArrow.style.opacity = 1;
     slider.style.transform = "translateX(-" + position + "px)";
+
+    rightArrow.disabled = false;
+    rightArrow.style.opacity = 1;
     // if at startposition => reset index and position to 0
   } else if (position - slideStep <= 0) {
     position = 0;
     index = 0;
-    leftArrow.style.opacity = "0.5";
-    leftArrow.disabled = true;
-    // add style to apply disabled-effect
     slider.style.transform = "translateX(-" + position + "px)";
+
+    // add style to apply disabled-effect
+    leftArrow.disabled = true;
+    leftArrow.style.opacity = "0.5";
   }
 }
 
@@ -114,7 +119,7 @@ if (position === 0) {
   leftArrow.style.opacity = "0.5";
 }
 
-// implement click to left-button
+// implement click left-button
 leftArrow.addEventListener("click", moveSliderLeft);
 
 // Add touch-events (for mobile)
@@ -143,9 +148,12 @@ view.addEventListener("touchstart", handleTouchStart);
 view.addEventListener("touchend", handleTouchEnd);
 
 // footer disable click - accordion
-
+//  + make javascript run again when passing breaking point between mobile and desktop view
+// (otherwise the carousel calculations would not transfer correctly if you resized window without loading the page)
 const mediaQueryObject = window.matchMedia("(min-width: 768px)");
 const details = document.querySelectorAll("details");
+
+const figure = document.querySelector("figure");
 
 function match(event) {
   details.forEach((detail) => {
@@ -157,7 +165,21 @@ function match(event) {
       detail.setAttribute("name", "accordion-footer");
     }
   });
+  // listen for windowsize
+  if (event.matches) {
+    console.log("desktop view activated");
+  } else {
+    console.log("mobile view activated");
+  }
 }
+
 match(mediaQueryObject);
 
 mediaQueryObject.addEventListener("change", match);
+
+// rerun script when resizing window
+// TODO: how to resolve??
+window.addEventListener("resize", () => {
+  slideWidth = slide.offsetWidth;
+  slider.style.transform = "translate(-" + position + "px)";
+});
