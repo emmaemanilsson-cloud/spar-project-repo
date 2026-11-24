@@ -32,6 +32,12 @@
     color: var(--text-color-dark);
 }
 
+.about-picture {
+    display: block;
+    width: 100%;
+    min-width: 0;
+}
+
 .img-about {
     display: block;
     width: 100%;
@@ -48,8 +54,12 @@
     }
 
     .about-heading {
-        font-size: var(--font-size-4xl);
+        font-size: var(--font-size-4xl); /*48px*/
         font-weight: var(--font-weight-bold);
+    }
+
+    .about-p {
+        max-width: 505px;
     }
 }
 

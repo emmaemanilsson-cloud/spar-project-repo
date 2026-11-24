@@ -4,28 +4,34 @@
 
 $images = [
     [
-        'src' => "/assets/instagallery/SoME.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/pictures/SoME.jpg",
+        'alt' => "SoMepicture",
+        'type' => "image",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/videos/spar_brand_vid.mp4",
+        'alt' => "SoMevideo",
+        'type' => "video",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/pictures/SoMe_Bild_Deskstop.jpg",
+        'alt' => "SoMepicture",
+        'type' => "image",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/videos/Instagram-story.mp4",
+        'alt' => "SoMevideo",
+        'type' => "video",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/pictures/SoMe_bild.png",
+        'alt' => "SoMepicture",
+        'type' => "image",
     ],
     [
-        'src' => "/assets/testImages/insta.jpg",
-        'alt' => "productimage"
+        'src' => "/assets/instagallery/videos/somevideo.mp4",
+        'alt' => "SoMevideo",
+        'type' => "video"
     ],
 
 ];
@@ -35,68 +41,68 @@ $images = [
 
 $products = [
     [
-        'name' => "Retro Hiker Shoe",
+        'name' => "Stig vandringssko",
         'image' => [
             'src' => "/assets/products/render_sko_en.jpg",
-            'alt' => "Shoe"
+            'alt' => "Vandringsskor i brun mocka med snörning"
         ],
         'price' => 3499,
     ],
     [
-        'name' => "Retro Hiker Bag",
+        'name' => "Led axelväska",
         'image' => [
             'src' => "/assets/products/väskarender.jpg",
-            'alt' => "Shoe"
+            'alt' => "Axelremsväska i brunt tyg med dragkedjor"
         ],
-        'price' => 1999,
+        'price' => 699,
     ],
     [
-        'name' => "Retro Hiker Bottle",
+        'name' => "Källa stålflaska",
         'image' => [
             'src' => "/assets/products/vattenflaskarender.jpg",
-            'alt' => "Shoe"
+            'alt' => "Vattenflaska med skruvkork i blankt stål"
         ],
-        'price' => 499,
+        'price' => 399,
     ],
     [
-        'name' => "Kräm",
+        'name' => "Vind läppbalsam",
         'image' => [
             'src' => "/assets/products/hudvårdrender.jpg",
-            'alt' => "Shoe"
+            'alt' => "Läppbalsam i krämfärgad/beige tub med skruvkork bredvid medföljande förpackning."
         ],
-        'price' => 249,
+        'price' => 149,
     ],
     [
-        'name' => "Mugg",
+        'name' => "Rast friluftsmugg",
         'image' => [
             'src' => "/assets/products/mugg.jpg",
-            'alt' => "Shoe"
+            'alt' => "Skogsgrön mugg i stål med matt finish på sidorna och blank topp. Öra i form av två hakar i stål som går att fälla in/ut."
         ],
-        'price' => 599,
+        'price' => 299,
     ],
     [
-        'name' => "Tech-ring",
+        'name' => "Puls smartring",
         'image' => [
             'src' => "/assets/products/ring_klar.jpg",
-            'alt' => "Shoe"
+            'alt' => "Högteknologisk ring i blankt stål som mäter pulsen med hjälp av sensorer på insidan."
         ],
-        'price' => 4999,
+        'price' => 2995,
     ],
     [
-        'name' => "Shoe Green",
+        'name' => "Stig vandringssko Grön",
         'image' => [
             'src' => "/assets/products/sko_grön.jpg",
-            'alt' => "Shoe green"
+            'alt' => "Vandringsskor i grön mocka med snörning"
         ],
-        'price' => 599,
+        'price' => 2995,
     ],
     [
-        'name' => "Shoe Red",
+        'name' => "Stig vandringssko Röd",
         'image' => [
             'src' => "/assets/products/sko_röd.jpg",
-            'alt' => "Shoe red"
+            'alt' => "Vandringsskor i röd mocka med snörning"
         ],
-        'price' => 599,
+        'price' => 2995,
     ]
 ];
 
