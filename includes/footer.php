@@ -43,7 +43,7 @@
         </div>
 
         <div class="copyrights">
-            <p>&copy; 2026</p>
+            <p>&copy; SPÅR 2026</p>
             <p>Privacy policy</p>
             <p>Cookie settings</p>
         </div>
