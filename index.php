@@ -33,7 +33,6 @@ require_once __DIR__ . '/data.php';
     <!-- placeholder carousel - remove later-->
 
     <section class="section-carousel">
-
         <div class="carousel-header">
             <h2 class="carousel-heading">Upptäck vår senaste kollektion.</h2>
             <div class="arrow-nav-carousel">
@@ -53,7 +52,9 @@ require_once __DIR__ . '/data.php';
                         <!-- paragraph instead?? -->
                         <figcaption class="product-name"><?= $product['name']; ?></figcaption>
                         <div class="price-order-box">
-                            <span class="price-order"><?= $product['price'] . "kr"; ?></span>
+                            <span class="price-order"><?= number_format($product['price'], 0, ".", " ") . "SEK"; ?></span>
+                            <!-- button for placing order (keep for now, until descision made)-->
+                            <button>Lägg i varukorg</button>
                         </div>
                     </figure>
                 <?php endforeach; ?>
@@ -83,7 +84,7 @@ require_once __DIR__ . '/data.php';
     <section class="newsletter-section" id="newsletter">
         <form>
             <!-- In wireframe heading newsletter is set to h1, use h2 instead? -->
-            <h1 class="newsletter-heading">En mer hållbar väg framåt.</h1>
+            <h2 class="newsletter-heading">En mer hållbar väg framåt.</h2>
             <p class="newsletter-p">Prenumerera på vårt nyhetsbrev och få 10 % rabatt på din första beställning! Som prenumerant följer du med på vår resa mot en mer hållbar framtid. Vi berättar löpande hur vi utvecklar vårt hållbarhetsarbete och vilka steg vi tar framåt.</p>
             <!--  -->
             <fieldset class="email-field">
@@ -103,8 +104,8 @@ require_once __DIR__ . '/data.php';
     <section class="insta-section">
         <h1 class="instagallery-heading">Följ vår vardag.</h1>
         <div class="instagram-info">
-            <!--<img src="assets/logo/instagram.svg" alt="">-->
-            <span>Följ @sparoutdoors på Instagram och få inspiration till ditt nästa äventyr. </span>
+            <img src="assets/logo/instagram.svg" alt="">
+            <span>sparoutdoor</span>
         </div>
         <div class="instagrid-container">
             <div class="img-container">
