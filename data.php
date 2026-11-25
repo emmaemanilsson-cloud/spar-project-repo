@@ -41,7 +41,7 @@ $images = [
 
 $products = [
     [
-        'name' => "Stig vandringssko",
+        'name' => "Stig vandringssko Sand",
         'image' => [
             'src' => "/assets/products/render_sko_en.jpg",
             'alt' => "Vandringsskor i brun mocka med snörning"
@@ -89,20 +89,20 @@ $products = [
         'price' => 2995,
     ],
     [
-        'name' => "Stig vandringssko Grön",
+        'name' => "Stig vandringssko Mossa",
         'image' => [
             'src' => "/assets/products/sko_grön.jpg",
             'alt' => "Vandringsskor i grön mocka med snörning"
         ],
-        'price' => 2995,
+        'price' => 3499,
     ],
     [
-        'name' => "Stig vandringssko Röd",
+        'name' => "Stig vandringssko Lava",
         'image' => [
             'src' => "/assets/products/sko_röd.jpg",
             'alt' => "Vandringsskor i röd mocka med snörning"
         ],
-        'price' => 2995,
+        'price' => 3499,
     ]
 ];
 
