@@ -10,9 +10,9 @@
   margin: 0;
   margin-top: var(--space-md); /*16px*/
   font-weight: var(--font-weight-semibold); /*600*/
-  font-size: var(--font-size-xl); /*32px*/
+  font-size: var(--font-size-2xl); /*36px*/
 
-  color: var(--charcoal);
+  color: var(--text-color-dark);
 }
 /* CHANGE BACKGROUND HERE*/
 .viewer-box {

@@ -141,7 +141,13 @@
     border-radius: 0;
     appearance: none;
     white-space: nowrap;
+    transition: background-color 0.3s ease;
 }
+
+ /*hover på knappen*/
+  .newsletter-footer button:hover {
+    background-color: #939391;
+    }
 
 /* bottom footer styling */
 .bottom-footer {
