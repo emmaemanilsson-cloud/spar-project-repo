@@ -43,7 +43,7 @@
   .newsletter-heading {
     margin: 0;
     font-weight: var(--font-weight-semibold); /*700*/
-    font-size: var(--font-size-2xl); /*36px*/
+    font-size: 40px;
     text-align: center;
   }
 
@@ -107,10 +107,10 @@
   .newsletter-button:hover {
     background-color: #939391;
     color: var(--text-color-dark);
-}
+    }
 
   /* media queries desctop view */
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     .newsletter-section {
       height: 1026px;
       align-self: stretch;

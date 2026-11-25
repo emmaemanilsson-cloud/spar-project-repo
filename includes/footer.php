@@ -29,9 +29,9 @@
     <div class="newsletter-footer">
         <h3>Nyhetsbrev</h3>
         <p>Prenumerera på vårt nyhetsbrev och få 10 % <br>rabatt på din första beställning</p>
-        <form>
+        <form action="#top">
             <label for="footer-email">Din e-postadress</label>
-            <input type="email" name="email" id="footer-email" placeholder="Din e-postadress" required>
+            <input type="email" name="email" id="footer-email" placeholder="example@mail.com">
             <button type="submit">Registrera dig</button>
         </form>
     </div>

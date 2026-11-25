@@ -16,7 +16,7 @@
   width: 100%;
   align-self: stretch;
   color: var(--text-color-dark);
-  font-size: var(--font-size-2xl); /*36px*/
+  font-size: var(--font-size-xl); /*32px*/
   font-weight: var(--font-weight-semibold); /*600*/
 }
 
@@ -69,7 +69,7 @@
     height: 28px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .img-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }

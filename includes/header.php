@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="css/newsletter.css?id=<?= filemtime('css/newsletter.css'); ?>">
     <link rel="stylesheet" href="css/instagallery.css?id=<?= filemtime('css/instagallery.css'); ?>">
     <link rel="stylesheet" href="css/footer.css?id=<?= filemtime('css/footer.css'); ?>">
+    <link rel="stylesheet" href="css/reducedmotion.css?id=<?= filemtime('css/reducedmotion.css'); ?>">
+
     <script src="js/script.js" defer></script>
 </head>
 
@@ -64,7 +66,7 @@
         </div>
     </div>
 
-    <header class="site-header">
+    <header class="site-header" id="top">
         <a href="index.php" class="logo-spar">
             <picture>
                 <source
