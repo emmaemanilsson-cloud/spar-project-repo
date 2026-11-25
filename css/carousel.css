@@ -115,7 +115,11 @@ figcaption {
 
 /* mobile view */
 @media (max-width: 768px) {
-  .arrow {
+  /* .arrow,
+  .arrow-nav-carousel {
     visibility: hidden;
-  }
+  } */
+  /* .arrow-nav-carousel {
+    font-size: 64px;
+  } */
 }
