@@ -46,7 +46,7 @@ require_once __DIR__ . '/data.php';
                         <!-- paragraph instead?? -->
                         <figcaption class="product-name"><?= $product['name']; ?></figcaption>
                         <div class="price-order-box">
-                            <span class="price-order"><?= $product['price'] . "kr"; ?></span>
+                            <span class="price-order"><?= number_format($product['price'], 0, ".", " ") . "SEK"; ?></span>
                             <!-- button for placing order (keep for now, until descision made)-->
                             <button>Lägg i varukorg</button>
                         </div>

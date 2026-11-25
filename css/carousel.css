@@ -49,6 +49,7 @@
 
 .carousel-viewer {
   width: 100%;
+  min-width: 90 px;
   height: fit-content;
   overflow: hidden;
   /* pan-y => browser handles vertical scroll */
@@ -111,15 +112,10 @@ figcaption {
   }
 }
 
-/* TODO! No arrows on mobile view?? */
-
 /* mobile view */
 @media (max-width: 768px) {
-  /* .arrow,
+  .arrow,
   .arrow-nav-carousel {
     visibility: hidden;
-  } */
-  /* .arrow-nav-carousel {
-    font-size: 64px;
-  } */
+  }
 }
