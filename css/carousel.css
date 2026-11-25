@@ -14,7 +14,7 @@
 }
 
 .carousel-heading {
-  font-size: var(--font-size-xl); /*32px*/
+  font-size: var(--font-size-2xl); /*36px*/
   font-weight: var(--font-weight-semibold);
 
   padding: 0;
@@ -69,7 +69,9 @@ figure {
   flex-direction: column;
   flex-shrink: 0;
   gap: var(--space-md);
-  width: 279px;
+  max-width: 279px;
+  width: 100%;
+  height: auto;
 }
 
 .slide {
@@ -103,11 +105,13 @@ figcaption {
   }
 
   figure {
-    width: 595px;
+    max-width: 595px;
+    width: 100%;
+    height: auto;
   }
 
   .carousel-heading {
-    font-size: var(--font-size-4xl);
+    font-size: var(--font-size-2xl); /*36px*/
     font-weight: var(--font-weight-bold);
   }
 }

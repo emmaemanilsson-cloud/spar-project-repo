@@ -14,13 +14,19 @@ require_once __DIR__ . '/data.php';
     <!-- About -->
     <section class="about-section">
         <div class="about-text">
-            <h2 class="about-heading">Gjort för att följa med.</h2>
-            <p class="about-p">Upptäck vår senaste kollektion, skapad för ett liv närmare naturen. Plaggen följer med dig hela vägen, både uppför fjället och på promenaden i skogen. Materialen är slitstarka, funktionerna genomtänkta och passformen lika bekväm på stigen som i vardagen. Designen är tidlös och gjord för att hålla säsong efter säsong.</p>
+            <h1 class="about-heading">Gjort för att följa med.</h1>
+            <p class="about-p">Redo för nästa äventyr? Upptäck vår senaste kollektion, skapad för ett liv närmare naturen. Genomtänkta detaljer, tidlös design och omtanke i varje val.</p>
         </div>
-        <img
-            class="img-about"
-            src="/assets/pics/ad40c7378f6d96fbd17b58cb97a2c1c92aa5f097.jpg"
-            alt="" />
+        <picture class="about-picture">
+            <source
+                media="(min-width: 768px)"
+                srcset="/assets/pics/orange_desktop.jpg">
+
+            <img
+                class="img-about"
+                src="/assets/pics/orange_mobile.jpg"
+                alt="Friluftsman i dimma">
+        </picture>
 
     </section>
 
@@ -28,7 +34,7 @@ require_once __DIR__ . '/data.php';
 
     <section class="section-carousel">
         <div class="carousel-header">
-            <h2 class="carousel-heading">Möt våra senaste favoriter</h2>
+            <h2 class="carousel-heading">Upptäck vår senaste kollektion.</h2>
             <div class="arrow-nav-carousel">
                 <button class="arrow left-arrow"><img src="/assets/symbols/arrow-left.svg" alt="Left arrow button" /></button>
                 <button class="arrow right-arrow"><img src="/assets/symbols/arrow-right.svg" alt="Right arrow button" /> </button>
@@ -62,10 +68,14 @@ require_once __DIR__ . '/data.php';
     <!-- i blickfånget -->
     <section class="viewer-section">
         <h2 class="viewer-heading">Genomtänkt in i minsta detalj.</h2>
-        <div class="viewer-box"></div>
+        <div class="viewer-box">
+            <video class="viewer-video" autoplay muted loop playsinline>
+                <source src="/assets/turntable/turntable_sko.mp4" type="video/mp4">
+            </video>
+        </div>
         <!-- Placeholder for color selection below 3D-animation -->
-        <span class="color-selector">&#x25C9 &#x25C9 &#x25C9</span> <!--html unicode in hex for geometric shape (fisheye)-->
-        <p class="viewer-p">En hyllning till det klassiska friluftslivet. Med inspiration från traditionella vandringsskor kombinerar den här modellen en tidlös silhuett med en robust karaktär. Skapad för att följa med på allt från skogspromenader till nya äventyr långt bortom stadens gator.</p>
+        <!--<span class="color-selector">&#x25C9 &#x25C9 &#x25C9</span> html unicode in hex for geometric shape (fisheye)-->
+        <p class="viewer-p">Inspirerad av traditionella vandringsskor förenar modellen en tidlös silhuett med friluftslivets historia och modern komfort. Det kraftiga ovanmaterialet tål blöt mossa och grusiga stigar, medan den greppvänliga sulan ger stadga i ojämn terräng.</p>
     </section>
 
 
@@ -92,7 +102,7 @@ require_once __DIR__ . '/data.php';
 
     <!-- Insta-gallery -->
     <section class="insta-section">
-        <h2 class="instagallery-heading">Era äventyr, vår inspiration</h2>
+        <h1 class="instagallery-heading">Följ vår vardag.</h1>
         <div class="instagram-info">
             <img src="assets/logo/instagram.svg" alt="">
             <span>sparoutdoor</span>
@@ -101,7 +111,25 @@ require_once __DIR__ . '/data.php';
             <div class="img-container">
                 <!-- loop through array to get each image (src and alt) -->
                 <?php foreach ($images as $image): ?>
-                    <img class="insta-img" src="<?= $image['src']; ?>" alt="<?= $image['alt']; ?>">
+                    <?php if ($image['type'] === 'video'): ?>
+
+                        <video
+                            class="insta-img"
+                            src="<?= $image['src']; ?>"
+                            autoplay
+                            muted
+                            loop
+                            playsinline>
+                        </video>
+
+                    <?php else: ?>
+
+                        <img
+                            class="insta-img"
+                            src="<?= $image['src']; ?>"
+                            alt="<?= $image['alt']; ?>">
+
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </div>

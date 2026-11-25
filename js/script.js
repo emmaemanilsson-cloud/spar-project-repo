@@ -1,17 +1,5 @@
 // CAROUSEL
 
-// test function to get product (experiment to understand javascript and objects)
-function getproductVar(productNum) {
-  for (let index = 0; index < products.length; index++) {
-    if (index === productNum - 1) {
-      let slides = {};
-      return (slides[`slide_${productNum}`] = products[index]);
-    }
-  }
-  return "Could not find product-index";
-}
-console.log(products[0]);
-
 // carousel move with buttons, desctop view
 // declare variables for targeted elements/nodes
 const rightArrow = document.querySelector(".right-arrow");
@@ -27,19 +15,20 @@ let index = 0;
 let position = 0;
 
 // widths and ranges
-const slideGap = 16;
+let slideGap = 16;
 let widthSlide = slide.offsetWidth;
-const widthSlider =
+let widthSlider =
   widthSlide * products.length + (products.length - 1) * slideGap;
-const widthView = view.offsetWidth;
-const slideStep = widthSlide + slideGap;
-const transportRange = widthSlider - widthView;
+let widthView = view.offsetWidth;
+let slideStep = widthSlide + slideGap;
+let transportRange = widthSlider - widthView;
 
 // number of slides in view
-const numSlidesInView = widthView / slideStep;
+let numSlidesInView = widthView / slideStep;
 
 // movement right button
 function moveSliderRight() {
+  calculations();
   // transition-styles
   slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
@@ -54,38 +43,55 @@ function moveSliderRight() {
 
   // check if below max allowed transport-range => moves one slide-width (+gap)
   if (position + slideStep < transportRange) {
+    index = position / (widthView * slideGap);
+    console.log("index left before: " + index);
+    console.log("position left before: " + position);
     position += slideStep;
     index++;
     slider.style.transform = "translateX(-" + position + "px)";
+    console.log("left after: " + index);
+    console.log("position left after: " + position);
 
     leftArrow.style.opacity = "1";
     leftArrow.disabled = false;
     // if a step would exceed max allowed transport-range => position at the rigthmost edge
   } else if (position + slideStep >= transportRange) {
+    index = position / (widthView * slideGap);
+    console.log("index left before: " + index);
+    console.log("position left before: " + position);
     position = transportRange;
     index++;
     slider.style.transform = "translateX(-" + transportRange + "px)";
+    console.log("Indexleft after: " + index);
+    console.log("position left after: " + position);
 
     rightArrow.disabled = true;
     rightArrow.style.opacity = "0.5";
     return;
-    // section.style.marginLeft = 0;
   }
 }
-// implement click to right-button
+
+// implement click right-button
 rightArrow.addEventListener("click", moveSliderRight);
 
 // movement left button
 function moveSliderLeft() {
+  calculations();
+
   slider.style.transitionDuration = ".4s";
   slider.style.transitionTimingFunction = "ease-out";
   widthSlide = slide.offsetWidth;
 
   // if position at rightmost edge => return to previous position (which is less than i slides width)
   if (position === transportRange) {
+    index = position / (widthView * slideGap);
+    console.log("index left before: " + index);
+    console.log("position left before: " + position);
     index--;
     position -= slideStep;
     slider.style.transform = "translateX(-" + position + "px)";
+    console.log("Index left after: " + index);
+    console.log("position left after: " + position);
 
     rightArrow.style.opacity = "1";
     rightArrow.disabled = false;
@@ -96,17 +102,26 @@ function moveSliderLeft() {
     position - slideStep > 0 &&
     position - slideStep < transportRange
   ) {
+    index = position / (widthView * slideGap);
     position -= slideStep;
+    console.log("index right before: " + index);
+    console.log("position right before: " + position);
     index--;
     slider.style.transform = "translateX(-" + position + "px)";
+    console.log("Index right after: " + index);
+    console.log("position right after: " + position);
 
     rightArrow.disabled = false;
     rightArrow.style.opacity = 1;
     // if at startposition => reset index and position to 0
   } else if (position - slideStep <= 0) {
+    console.log("Index right before: " + index);
+    console.log("position right before: " + position);
     position = 0;
     index = 0;
     slider.style.transform = "translateX(-" + position + "px)";
+    console.log("Index right after: " + index);
+    console.log("position right after: " + position);
 
     // add style to apply disabled-effect
     leftArrow.disabled = true;
@@ -165,21 +180,57 @@ function match(event) {
       detail.setAttribute("name", "accordion-footer");
     }
   });
-  // listen for windowsize
-  if (event.matches) {
-    console.log("desktop view activated");
-  } else {
-    console.log("mobile view activated");
-  }
 }
 
 match(mediaQueryObject);
 
 mediaQueryObject.addEventListener("change", match);
 
-// rerun script when resizing window
-// TODO: how to resolve??
-window.addEventListener("resize", () => {
-  slideWidth = slide.offsetWidth;
-  slider.style.transform = "translate(-" + position + "px)";
-});
+function calculations() {
+  widthSlide = slide.offsetWidth;
+  widthSlider = widthSlide * products.length + (products.length - 1) * slideGap;
+  widthView = view.offsetWidth;
+  slideStep = widthSlide + slideGap;
+  numSlidesInView = widthView / slideStep;
+
+  transportRange = widthSlider - widthView;
+
+  maxindex = Math.floor(transportRange / (widthView * slideGap));
+  lastIndex = maxindex + 1;
+}
+
+calculations();
+
+window.addEventListener(window, calculations);
+
+// IN PROGRESS: create functions to update position in relation to index when you resize window and position changes
+
+// function updatePosition() {
+//   calculations();
+//   if (index >= maxindex) {
+//     position = transportRange;
+//     slider.style.transform = "translateX(-" + transportRange + "px)";
+//   } else if (index <= 0) {
+//     index = 0;
+//     position = 0;
+//     slider.style.transform = "translateX(-" + position + "px)";
+//   } else if (index > 0 && index < maxindex) {
+//     position = slideStep * index;
+//     slider.style.transform = "translateX(-" + position + "px)";
+//   }
+// }
+
+// updatePosition();
+
+// function updateSlider() {
+//   calculations();
+//   if (index >= maxindex) {
+//     slider.style.transform = "translateX(-" + transportRange + "px)";
+//   } else if (index <= 0) {
+//     slider.style.transform = "translateX(-" + position + "px)";
+//   } else if (index > 0 && index < maxindex) {
+//     slider.style.transform = "translateX(-" + position + "px)";
+//   }
+// }
+
+// updateSlider();
