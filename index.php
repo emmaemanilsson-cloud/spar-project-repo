@@ -101,8 +101,8 @@ require_once __DIR__ . '/data.php';
     <section class="insta-section">
         <h1 class="instagallery-heading">Följ vår vardag.</h1>
         <div class="instagram-info">
-            <img src="assets/logo/instagram.svg" alt="">
-            <span>sparoutdoor</span>
+            <p>Följ @sparoutdoors på instagram och få inspiration till ditt nästa äventyr.</p>
+            
         </div>
         <div class="instagrid-container">
             <div class="img-container">
