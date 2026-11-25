@@ -30,7 +30,6 @@ require_once __DIR__ . '/data.php';
 
     </section>
 
-    <!-- placeholder carousel - remove later-->
 
     <section class="section-carousel">
         <div class="carousel-header">
